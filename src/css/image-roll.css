@@ -1,0 +1,8 @@
+.image-roll {
+  display: flex;
+  justify-content: center;
+}
+
+.image-roll-wrap {
+  padding: 10px;
+}

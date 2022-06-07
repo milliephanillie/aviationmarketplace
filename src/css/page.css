@@ -1,0 +1,29 @@
+@import "const.css";
+
+.marketplace-filters ul {
+  display: flex;
+}
+
+.marketplace-filters ul li {
+  list-style: none;
+}
+
+.marketplace-filters ul li a {
+  padding: 10px;
+  display: block;
+  text-transform: uppercase;
+}
+
+.marketplace-filters ul li,
+.marketplace-filters ul li a {
+  font-family: var(--headerFonts);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  color: var(--textgray);
+}
+
+.marketplace-filters ul li a.current {
+  font-weight: 600;
+}

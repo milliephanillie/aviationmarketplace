@@ -1,0 +1,55 @@
+.item-title-wrapper {
+  text-align: center;
+}
+
+.item-content {
+  padding: 10px 0;
+}
+
+.item-image img {
+  width: 100%;
+}
+
+.product-tag {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.product-tag span {
+  font-family: var(--headerFonts);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: var(--textgray);
+}
+
+.item-company {
+  margin-bottom: 10px;
+}
+
+.item-body h4 a {
+  font-family: var(--defaultFonts);
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  text-decoration: none;
+  color: var(--textDefault);
+}
+
+
+.item-article h4 a {
+  font-family: var(--defaultFonts);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.accord-dd {
+  border-top: 1px solid var(--borderColor);
+}

@@ -1,0 +1,39 @@
+{
+  "name": "marketplace",
+  "version": "1.0.0",
+  "description": "",
+  "dependencies": {
+    "@fortawesome/fontawesome-pro": "^6.1.1",
+    "jquery": "^3.6.0",
+    "jsdom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/jquery": "^3.5.14",
+    "autoprefixer": "^10.4.7",
+    "copy-webpack-plugin": "^11.0.0",
+    "css-loader": "^6.7.1",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.6.0",
+    "postcss": "^8.4.14",
+    "postcss-loader": "^7.0.0",
+    "postcss-preset-env": "^7.6.0",
+    "style-loader": "^3.3.1",
+    "tailwind": "^4.0.0",
+    "tailwindcss": "^3.0.24",
+    "ts-loader": "^9.3.0",
+    "typescript": "^4.7.2",
+    "webpack": "^5.72.1",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.9.0",
+    "webpack-manifest-plugin": "^5.0.0",
+    "webpack-nano": "^1.1.1"
+  },
+  "scripts": {
+    "start": "webpack serve --mode=development --open --config webpack.dev.js",
+    "build": "export NODE_ENV=production && webpack --config webpack.prod.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

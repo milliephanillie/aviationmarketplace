@@ -1,0 +1,31 @@
+.root,
+#root,
+#docs-root,
+:root {
+  --brandprimary: #082036;
+  --brandsecondary: red;
+  --midnight: #082036;
+
+  --textblack: black;
+  --textDefault: #242424;
+  --textGray: #5D4F54;;
+
+  --borderColor: #E5E5E5;
+
+
+  --sizeprimary: 18px;
+  --sizesecondary: 28px;
+  --sizelarge: 48px;
+
+  --h1: 48px;
+  --h3: 21px;
+  --p: 18px;
+
+  --headerFonts: Montserrat, Lora, Helvetica, Arial;
+  --defaultFonts: Lora, Montserrat, Helvetica, Arial;
+
+  --shadowbig: 0 4px 2px -2px rgba(0,0,0,.3);
+  --shadow: 0 1px 4px rgba(0,0,0,.16);
+  --shadowall: 0px 0px 10px 0px rgba(0,0,0,.1);
+  --leftshadow: 0em 0em 2em 0em rgba(0,0,0,.25);
+}

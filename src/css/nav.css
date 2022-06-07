@@ -1,0 +1,132 @@
+header.nav-header {
+  background: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: 0.3s all ease;
+}
+
+header.nav-header.black {
+  background: black;
+}
+
+header.nav-header.fixed {
+  z-index: 2;
+  box-shadow: var(--shadowbig);
+}
+
+header.nav-header.fixed .nav-row {
+  padding: 15px 0 10px;
+  transition: 0.3s all ease;
+  z-index: 2;
+}
+
+.nav-row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  transition: 0.3s all ease-in;
+}
+
+nav.main-nav  {
+  align-items: center;
+  display: flex;
+}
+
+nav.main-nav > ul.main-menu {
+  margin-top: -3.5px;
+}
+
+nav.main-nav > ul,
+nav.footer-nav > ul {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+nav.main-nav ul li {
+  list-style: none;
+}
+
+nav.main-nav ul li a {
+   text-decoration: none;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+nav.main-nav ul li a i {
+  color: white;
+}
+
+nav.main-nav ul > li > a {
+  text-transform: uppercase;
+}
+
+nav ul li a {
+  color: white;
+  padding: 10px;
+}
+
+nav.main-nav > ul {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+nav ul.main-menu {
+  padding-right: 10px;
+  border-right: 1px solid rgb(255 255 255 / 30%);
+}
+
+nav ul.user-login {
+  padding-left: 10px;
+}
+
+/** User Login **/
+
+i {
+  color: white;
+}
+
+/** Mobile Menu **/
+
+.mobile-menu {
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+}
+
+.mobile-menu.open {
+  height: 100%;
+  width: 100%;
+  z-index: 3;
+  top: 0;
+}
+
+.mobile-menu.open .mobile-menu-inner {
+  right: 0;
+}
+
+.mobile-menu.open .mobile-menu-shadow  {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(0 0 0 / 85%);
+}
+
+.mobile-menu-inner {
+  max-width: 550px;
+  height: 100%;
+  background: var(--midnight);
+  width: 100%;
+  z-index: 3;
+  top: 0;
+  position: absolute;
+  right: -550px;
+}

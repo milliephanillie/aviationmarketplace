@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .nav-header.fixed {
+    @apply bg-black;
+  }
+
+  .do-4 {
+    @apply grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-4;
+  }
+
+
+  .do-3 {
+    @apply grid lg:grid-cols-3 md:grid-cols-1 gap-4;
+  }
+
+  .do-2 {
+    @apply grid lg:grid-cols-2 md:grid-cols-1 gap-4;
+  }
+
+  .tagged {
+    @apply text-xs font-medium font-headers;
+  }
+}
+
+@import "const.css";
+
+@import "~@fortawesome/fontawesome-pro/css/all.css";
+
+@import "fonts/Montserrat/stylesheet.css";
+@import "fonts/Lora/stylesheet.css";
+@import "sections.css";
+@import "page.css";
+@import "single.css";
+@import "nav.css";
+@import "gallery.css";
+@import "hero.css";
+@import "grid.css";
+@import "type.css";
+@import "item.css";
+@import "image-roll.css";
+@import "button.css";
+@import "info-box.css";
+@import "accordian.css";
+@import "footer.css";
+
+.html,
+body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  font-family: Montserrat, Helvetica, Arial;
+}
+
+* {
+  box-sizing: border-box;
+}

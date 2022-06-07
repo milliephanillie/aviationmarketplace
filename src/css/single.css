@@ -1,0 +1,101 @@
+@import 'const.css';
+
+.single-post h1 {
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: 0.2em;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.single-post .product-tag {
+  margin-bottom: 20px;
+}
+
+.the-price span {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  font-family: var(--headerFonts);
+}
+
+.meta .field {
+  margin-bottom: 10px;
+}
+
+.meta .field-name h4 {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: var(--headerFonts);
+  font-size: 12px;
+  line-height: 15px;
+  margin-bottom: 0;
+}
+
+.meta .field-value span {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+
+/** Forms  **/
+
+.form-wrapper {
+  border: 1px solid var(--textGray);
+  padding: 40px;
+}
+
+.form-header {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.form-header > div {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.verified {
+  display: flex;
+}
+
+.verified img {
+  margin-right: 10px;
+}
+
+form.inquiry input,
+form.inquiry input[type=text],
+form.inquiry input[type=email],
+form.inquiry input[type=form]{
+  margin-bottom: 20px;
+  width: 100%;
+  outline: none;
+  padding: 10px;
+}
+
+form.inquiry textarea {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+form.inquiry button {
+  background: #E32922;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 15px;
+  font-family: var(--headerFonts);
+  width: 100%;
+  display: block;
+  padding: 10px;
+  text-align: center;
+  border: none;
+  outline: none;
+}

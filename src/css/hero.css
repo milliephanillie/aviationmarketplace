@@ -1,0 +1,66 @@
+section.hero {
+  padding: 0 0 0 0;
+}
+
+.hero-wrapper {
+  background-image: url('../static/images/hero-bg.png');
+  padding: 320px 0 40px 0;
+  background-position: center center;
+  background-size: cover;
+}
+
+.hero .page-title {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.hero .page-title-header h1,
+.hero .page-title-header p,
+.hero .page-title-byline p {
+  color: white;
+}
+
+.hero .page-title-header h1 {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-weight: 500;
+}
+
+.hero .page-title-header {
+  position: relative;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  bottom: 0;
+}
+
+.hero .page-title-header:after {
+  content: '';
+  height: 2px;
+  background-color: white;
+  width: 16%;
+  position: absolute;
+  justify-content: center;
+  left: 42%;
+  bottom: 0;
+}
+
+.hero .page-title-header p {
+  font-style: italic;
+  font-weight: 100;
+  margin-bottom: 0;
+}
+
+.hero .page-title-byline p,
+.hero .page-title-byline a {
+  text-transform: uppercase;
+  font-size: 10px;
+  line-height: 12px;
+}
+
+.hero .page-title-byline a {
+  font-style: italic;
+  text-decoration: underline;
+  color: white;
+}

@@ -1,0 +1,67 @@
+.accord-dd {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.accord-dd-label {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 5px;
+  cursor: pointer;
+  transition: 0.5s all ease;
+}
+
+
+.accord-dd-label span {
+  font-family: var(--headerFonts);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  /* identical to box height */
+
+  letter-spacing: 0.2em;
+  font-weight: 500;
+}
+
+.accord-dd-label + .accord-content {
+  height: 0;
+  visibility: hidden;
+  transition: 0.5s all ease-out;
+  padding: 0 5px 0;
+  font-family: var(--defaultFonts);
+  font-size: 16px;
+  line-height: 20px;
+  opacity: 0;
+  max-height:  0;
+}
+
+.accord-dd-label + .accord-content,
+.accord-dd-label + .accord-content p,
+.accord-dd-label + .accord-content span {
+  color: #5D4F54;
+}
+
+.accord-dd-label.open + .accord-content {
+  display: block;
+  visibility: visible;
+  height: 100%;
+  transition: 0.3s all ease-in;
+  padding: 10px 5px 20px;
+  margin-top: 0;
+  opacity: 1;
+  max-height:  500px;
+}
+
+.accord-dd-label i {
+  transition: 0.5s all ease;
+}
+
+.accord-dd-label.open i {
+  transform: rotate(180deg);
+  transition: 0.5s all ease;
+}
+
+
