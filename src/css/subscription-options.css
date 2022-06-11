@@ -1,0 +1,33 @@
+.subscription-options ul li {
+  list-style-type: none;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.subscription-options ul li > ul {
+  margin-top: 5px;
+}
+
+.subscription-options ul li label {
+  font-family: var(--defaultFonts);
+  font-size: 16px;
+  line-height: 20px;
+}
+
+
+.subscription-options input[type=radio] {
+  border: 0px;
+  height: 16px;
+  width: 16px
+}
+
+.subscription-options input[type=checkbox] {
+  height: 20px;
+  width: 20px
+}
+
+.subscription-options input[type=checkbox],
+.subscription-options input[type=radio] {
+  display: inline-block;
+  vertical-align: top;
+}

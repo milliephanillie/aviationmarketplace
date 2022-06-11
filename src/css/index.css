@@ -7,6 +7,10 @@
     @apply bg-black;
   }
 
+  .middle-me {
+    @apply flex flex-wrap justify-center items-center;
+  }
+
   .do-4 {
     @apply grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-4;
   }
@@ -37,6 +41,8 @@
 @import "nav.css";
 @import "gallery.css";
 @import "hero.css";
+@import "sell.css";
+@import "input.css";
 @import "grid.css";
 @import "type.css";
 @import "item.css";
@@ -45,6 +51,9 @@
 @import "info-box.css";
 @import "accordian.css";
 @import "footer.css";
+@import "subscription-options.css";
+@import "login.css";
+
 
 .html,
 body {
@@ -57,4 +66,9 @@ body {
 
 * {
   box-sizing: border-box;
+}
+
+*:before, *:after {
+  padding: 0;
+  margin: 0;
 }

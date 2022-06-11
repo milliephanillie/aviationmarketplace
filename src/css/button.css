@@ -8,6 +8,8 @@
   line-height: 15px;
   font-family: var(--headerFonts);
   font-weight: 600;
+  text-decoration: none;
+  color: var(--textDefault);
 }
 
 .button-red {

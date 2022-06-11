@@ -5,10 +5,16 @@
   padding: 0 20px;
 }
 
+.small-container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
 .row {
   margin-bottom: 30px;
 }
 
 .let-header-overlap {
-  padding-top: 115px;
+  padding-top: 145px;
 }

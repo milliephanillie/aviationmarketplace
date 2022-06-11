@@ -7,6 +7,14 @@ header.nav-header {
   transition: 0.3s all ease;
 }
 
+header.nav-header.sellers {
+  background: white;
+}
+
+header.nav-header.sellers .nav-container {
+  border-bottom: 2px solid black;
+}
+
 header.nav-header.black {
   background: black;
 }
@@ -14,6 +22,16 @@ header.nav-header.black {
 header.nav-header.fixed {
   z-index: 2;
   box-shadow: var(--shadowbig);
+
+}
+
+header.nav-header .nav-container {
+  transition: .3s border ease-in;
+}
+
+header.nav-header.fixed .nav-container {
+  border-bottom: 1px solid rgba(255, 0, 0, .0);
+  transition: .3s all ease;
 }
 
 header.nav-header.fixed .nav-row {
@@ -59,6 +77,11 @@ nav.main-nav ul li a {
   line-height: 1;
 }
 
+.sellers nav.main-nav ul li a,
+.sellers nav.main-nav ul li a i {
+  color: var(--textDefault);
+}
+
 nav.main-nav ul li a i {
   color: white;
 }
@@ -75,6 +98,10 @@ nav ul li a {
 nav.main-nav > ul {
   padding-top: 5px;
   padding-bottom: 5px;
+}
+
+.sellers nav ul.main-menu {
+  border-right: 1px solid rgb(0 0 0 / 10%);
 }
 
 nav ul.main-menu {

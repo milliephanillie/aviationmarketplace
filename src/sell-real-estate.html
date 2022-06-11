@@ -1,0 +1,217 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<header class="sellers nav-header">
+    <div class="container nav-container">
+        <div class="nav-row">
+            <div class="logo">
+                <a class="" href="">
+                    <img src="../static/images/logo-dark.png" alt="FLYING Marketplace" />
+                </a>
+            </div>
+            <nav class="main-nav">
+                <ul class="main-menu">
+                    <li><a href="">BUY</a></li>
+                    <li><a href="">SELL</a></li>
+                </ul>
+                <ul class="user-login">
+                    <li><a href=""><i class="fa-solid fa-user-large"></i></a></li>
+                </ul>
+            </nav>
+            <!--<button class="sm:hidden menu-toggle " id="menu-toggle">-->
+            <!--<span class="inner">-->
+            <!--<span class="lines">-->
+            <!--<span></span>-->
+            <!--<span></span>-->
+            <!--<span></span>-->
+            <!--</span>-->
+            <!--<span class="x">-->
+            <!--<span></span>-->
+            <!--<span></span>-->
+            <!--</span>-->
+            <!--</span>-->
+            <!--</button>-->
+        </div>
+    </div>
+</header>
+
+<section class="sellers-header let-header-overlap">
+    <div class="container">
+        <div class="header text-center">
+            <h1 class="seller">SELL YOUR REAL ESTATE</h1>
+        </div>
+    </div>
+</section>
+
+<!-- Listing -->
+<section class="sell-input sell-aircraft-input listing-input">
+    <div class="container">
+        <div class="small-container">
+            <div class="form">
+                <div class="section-header"><h3>Listing</h3></div>
+                <div class="input-row"></form>
+                    <div class="category">
+                        <select>
+                            <option disabled selected value> -- Select Type -- </option>
+                            <option>Jets</option>
+                            <option>Helicoptoers</option>
+                            <option>Commerical Real Estate</option>
+                            <option>Residential Real Estate</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="input-row">
+                    <div class="Condition">
+                        <select>
+                            <option disabled selected value> -- Select Category -- </option>
+                            <option>Used</option>
+                            <option>New</option>
+                            <option>Commerical Real Estate</option>
+                            <option>Residential Real Estate</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="input-row">
+                    <div class="price">
+                        <div class="small-input">
+                            <label>$</label><input placeholder="Price (USD)" type="number" min="1" step="any" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text">
+                        <textarea cols="10" rows="10" placeholder="Description" ></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Add Photos -->
+<section class="sell-input sell-aircraft-input add-photos-input">
+    <div class="container">
+        <div class="small-container">
+            <div class="drag-and-drop">
+                <div class="dnd">
+                    <div class="dnd-inner">
+                        <div class="dnd-click-area">
+                            <div class="dnd-body">
+                                <i class="fa-solid fa-images"></i>
+                                <p>Add photos or drag & drop</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- General -->
+<section class="sell-input sell-aircraft-input aircraft-input">
+    <div class="container">
+        <div class="small-container airframe form">
+            <div class="section-header"><h3>GENERAL</h3></div>
+            <div class="input-row">
+                <div class="category">
+                    <input type="text" placeholder="Street Address" />
+                </div>
+            </div>
+            <div class="input-row">
+                <input type="text" placeholder="City" />
+            </div>
+            <div class="input-row">
+                <div class="condition">
+                    <select>State
+                        <option>Alaska</option>
+                        <option>WYOMING</option>
+                    </select>
+                </div>
+            </div>
+            <div class="input-row">
+                <input type="text" placeholder="Lot Site" />
+            </div>
+            <div class="input-row">
+                <input type="text" placeholder="Parking Spaces" />
+            </div>
+            <div class="input-row">
+                <div class="checkbox-row">
+                    <input type="checkbox" />
+                    <label>Dedicated car garage?</label>
+                </div>
+            </div>
+            <div class="input-row">
+                <input required placeholder="Square Footage" type="number" />
+            </div>
+            <div class="input-row">
+                <input required placeholder="Number of bedrooms" type="number" />
+            </div>
+            <div class="input-row">
+                <input required placeholder="Year Built" type="number" />
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Additional Notes -->
+<section class="sell-input sell-aircraft-input additional-notes-input">
+    <div class="container">
+        <div class="small-container airframe form">
+            <div class="section-header"><h3>Additional Notes</h3><p>Limited markdown allowed for formatting.</p></div>
+            <div class="input-row">
+                <textarea rows="10" placeholder="Interior notes"></textarea>
+            </div>
+            <div class="input-row">
+                <textarea rows="10" placeholder="Exterior notes"></textarea>
+            </div>
+            <div class="input-row">
+                <textarea rows="10" placeholder="Hanger notes"></textarea>
+            </div>
+            <div class="input-row">
+                <textarea rows="10" placeholder="Runway notes"></textarea>
+            </div>
+            <div class="input-row">
+                <textarea rows="10" placeholder="Neighborhood notes"></textarea>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="sell-input save-input">
+    <div class="input-row">
+        <div class="flex justify-center">
+            <a class="px-[60px] mr-[20px] button button-red">CONTINUE</a>
+            <a class="px-[60px] button">SAVE DRAFT</a>
+        </div>
+    </div>
+</section>
+
+<footer class="sell-input footer">
+    <div class="footer-wrapper container flex justify-center md:justify-space-between flex-wrap">
+        <div class="mb-[10px] md:mb-0 footer-logo flex justify-center md:justify-start flex-wrap w-100 md:w-1/3">
+            <img src="../static/images/flyingmag-logo-black.svg" alt="FLYING black logo">
+        </div>
+        <div class="footer-menu flex justify-end w-100 md:w-2/3">
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="">About Us</a></li>
+                    <li><a href="">Help center</a></li>
+                    <li><a href="">Terms of use</a></li>
+                    <li><a href="">Privacy policy</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</footer>
+
+
+<script src="bundle.js"></script>
+</body>
+</html>

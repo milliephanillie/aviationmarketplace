@@ -1,0 +1,13 @@
+input,
+input[type=text],
+input[type=email],
+input[type=form] {
+  margin-bottom: 20px;
+  width: 100%;
+  outline: none;
+  padding: 10px;
+}
+
+input::placeholder  {
+  color: var(--textGray);
+}
