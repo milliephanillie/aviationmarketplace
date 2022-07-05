@@ -22,36 +22,45 @@
                     </div>
                 </div>
                 <div class="w-full login-form">
-                    <div class="subheader">
-                        <input type="email" placeholder="Email address" />
-                    </div>
-                    <div class="continue">
-                        <div class="submit">
-                            <button value="email" class="w-100 button button-red">Continue</button>
+                    <form class="loginForm">
+                        <div class="subheader">
+                            <div class="form-field">
+                                <input class="username" name="username" type="text"
+                                       placeholder="Username or Email address" value=""/>
+                            </div>
+                            <div class="form-field">
+                                <input class="password" name="password" type="password" placeholder="Password"
+                                       value=""/>
+                            </div>
                         </div>
-                    </div>
+                        <div class="continue">
+                            <div class="submit">
+                                <button value="email" class="w-100 button button-red">Continue</button>
+                            </div>
+                        </div>
+                    </form>
 
                     <div class="login-condition"><span>OR</span></div>
 
                     <div class="continue-socials">
                         <div class="submit">
-                            <button  id="microsoft" value="email" class="w-100 button"><i
+                            <button id="microsoft" value="email" class="w-100 button"><i
                                     class="fa-brands fa-microsoft"></i> Continue with Microsoft
                             </button>
                         </div>
                         <div class="linkedin">
-                            <button  id="linkedin" value="email" class="w-100 button"><i
+                            <button id="linkedin" value="email" class="w-100 button"><i
                                     class="fa-brands fa-linkedin"></i> Continue with Linkedin
                             </button>
                         </div>
                         <div class="submit">
-                            <button  id="google" value="email" class="w-100 button"><i
+                            <button id="google" value="email" class="w-100 button"><i
                                     class="fa-brands fa-google"></i> Continue with Google
                             </button>
                         </div>
                         <div class="submit">
-                            <button  id="facebook" value="email" class="w-100 button"><i
-                                    class="fa-brands fa-facebook"></i>  Continue with Facebook
+                            <button id="facebook" value="email" class="w-100 button"><i
+                                    class="fa-brands fa-facebook"></i> Continue with Facebook
                             </button>
                         </div>
                     </div>

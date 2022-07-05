@@ -4,8 +4,13 @@
   "description": "",
   "dependencies": {
     "@fortawesome/fontawesome-pro": "^6.1.1",
+    "@splidejs/splide": "^4.0.7",
+    "@types/react": "^18.0.14",
     "jquery": "^3.6.0",
-    "jsdom": "^19.0.0"
+    "jsdom": "^19.0.0",
+    "react": "^18.2.0",
+    "react-dnd": "^16.0.1",
+    "react-dnd-html5-backend": "^16.0.1"
   },
   "devDependencies": {
     "@types/jquery": "^3.5.14",

@@ -1,0 +1,14 @@
+.profile-banner h1 {
+  margin-bottom: 10px;
+}
+
+.profile-description p {
+  font-family: var(--headerFonts);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.profile-header {
+  margin-bottom: 30px;
+}

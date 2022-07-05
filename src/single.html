@@ -63,7 +63,7 @@
                         <img src="../static/images/single-1.jpg"/>
                         <div class="view-all-wrapper">
                             <div class="view-all-inner">
-                                <a href="#"><i class="text-white fa-solid fa-images"></i> View All</a>
+                                <a class="js-view-all" href="#"><i class="text-white fa-solid fa-images"></i> View All</a>
                             </div>
                         </div>
                     </div>
@@ -471,6 +471,48 @@
         </div>
     </div>
 </footer>
+
+<div class="modal gallery-modal">
+    <div class="modal-header">
+        <div class="close-wrapper">
+                <button type="button" class="close" aria-label="Close">
+                    <span>X</span>
+                    <span>Close</span>
+                </button>
+        </div>
+        <div class="image-count">
+            <span>2/4</span>
+        </div>
+        <div class="close">
+            <a href="#">
+                <i class="fa fa-share"></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="modal-content image-gallery">
+        <div class="slider">
+            <div class="splide" aria-label="Image gallery">
+                <div class="splide__arrows">
+                    <button class="splide__arrow splide__arrow--prev">
+                        <i class="fa fa-arrow-alt-circle-left"></i>
+                    </button>
+                    <button class="splide__arrow splide__arrow--next">
+                        <i class="fa fa-arrow-alt-circle-right"></i>
+                    </button>
+                </div>
+
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide"><img src="../static/images/single-1.jpg"/></li>
+                        <li class="splide__slide"><img src="../static/images/single-1.jpg"/></li>
+                        <li class="splide__slide"><img src="../static/images/aircraft-45.png" alt="Airplane" /></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <script src="bundle.js"></script>
 </body>
 </html>

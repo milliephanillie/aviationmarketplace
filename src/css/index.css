@@ -53,6 +53,9 @@
 @import "footer.css";
 @import "subscription-options.css";
 @import "login.css";
+@import "profile.css";
+@import "modal.css";
+@import "@splidejs/splide/dist/css/splide.min.css";
 
 
 .html,

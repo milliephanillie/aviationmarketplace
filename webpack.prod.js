@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { WebpackManifestPlugin } = require('webpack-manifest-plugin');
 
-let htmlPageNames = ['page', 'single'];
+let htmlPageNames = ['page', 'single', 'login', 'profile', 'sellaircraft', 'sellrealestate', 'sell', 'settings', 'promotion', 'profile'];
 
 let multipleHtmlPlugins = htmlPageNames.map(name => {
     return new HtmlWebpackPlugin({
@@ -23,6 +23,13 @@ module.exports = {
         index: "./src/index.ts",
         page: "./src/page.ts",
         single: "./src/single.ts",
+        login: "./src/login.ts",
+        profile: "./src/profile.ts",
+        sellaircraft: "./src/sellaircraft.ts",
+        sellrealestate: "./src/sellrealestate.ts",
+        sell: "./src/sell.ts",
+        settings: "./src/settings.ts",
+        promotion:  "./src/promotion.ts",
     },
     mode: "production",
     devServer: {
