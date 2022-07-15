@@ -5,13 +5,9 @@
   "dependencies": {
     "@fortawesome/fontawesome-pro": "^6.1.1",
     "@splidejs/splide": "^4.0.7",
-    "@types/react": "^18.0.14",
+    "axios": "^0.27.2",
     "jquery": "^3.6.0",
-    "jsdom": "^19.0.0",
-    "react": "^18.2.0",
-    "react-dnd": "^16.0.1",
-    "react-dnd-html5-backend": "^16.0.1",
-    "react-dom": "^18.2.0"
+    "jsdom": "^19.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.18.6",
@@ -21,7 +17,6 @@
     "@babel/preset-typescript": "^7.18.6",
     "@babel/runtime": "^7.18.6",
     "@types/jquery": "^3.5.14",
-    "@types/react-dom": "^18.0.6",
     "autoprefixer": "^10.4.7",
     "babel-loader": "^8.2.5",
     "copy-webpack-plugin": "^11.0.0",
