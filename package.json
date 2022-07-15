@@ -4,6 +4,7 @@
   "description": "",
   "dependencies": {
     "@fortawesome/fontawesome-pro": "^6.1.1",
+    "axios": "^0.27.2",
     "jquery": "^3.6.0",
     "jsdom": "^19.0.0"
   },
