@@ -1,9 +1,15 @@
 const path = require("path");
 const CopyPlugin = require("copy-webpack-plugin");
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ASSET_PATH = process.env.ASSET_PATH || '/';
 
 module.exports = {
-    entry: "./src/index.ts",
+    entry: {
+        index: './src/index.tsx',
+    },
+    output: {
+
+    },
     mode: "development",
     devServer: {
         watchFiles: ["src/**/*"],
@@ -12,14 +18,22 @@ module.exports = {
                 target: 'http://localhost/',
             },
         },
-
     },
     module: {
         rules: [
             {
-                test: /\.tsx?$/,
-                use: "ts-loader",
+                test: /\.(ts|js)x?$/i,
                 exclude: /node_modules/,
+                use: {
+                    loader: "babel-loader",
+                    options: {
+                        presets: [
+                            "@babel/preset-env",
+                            "@babel/preset-react",
+                            "@babel/preset-typescript",
+                        ],
+                    },
+                },
             },
             {
                 test: /\.css$/i,
@@ -38,11 +52,11 @@ module.exports = {
                 { from: "static", to: "static" }
             ],
         }),
+        // new HtmlWebpackPlugin({
+        //     template: "./src/admin/index.html",
+        //     filename: "./src/admin/index.html",
+        //     publicPath: './admin/',
+        //     inject: true,
+        // })
     ],
-    output: {
-        publicPath: ASSET_PATH,
-        filename: "bundle.js",
-        path: path.resolve(__dirname, "dist"),
-        clean: true,
-    },
 };

@@ -23,3 +23,5 @@ $('.accord-dd-label').on('click', function (e) {
     $(this).toggleClass('open');
     $(this).toggleClass('clicked');
 })
+
+

@@ -1,11 +1,21 @@
 input,
 input[type=text],
 input[type=email],
-input[type=form] {
-  margin-bottom: 20px;
+input[type=form],
+input[type=tel],
+input[type=number] {
+  margin-bottom: 0;
   width: 100%;
   outline: none;
   padding: 10px;
+}
+
+input[type=checkbox],
+input[type=radio] {
+  margin:  0;
+  width: auto;
+  transform: scale(1.2);
+  margin: 0 5px;
 }
 
 input::placeholder  {

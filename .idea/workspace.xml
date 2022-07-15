@@ -5,18 +5,15 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/login.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/button.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/button.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/grid.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/grid.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/input.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/input.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/modal.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/modal.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/type.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/type.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sell-aircraft.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/sellaircraft.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sell-real-estate.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/sellrealestate.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sell-step-one.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/sell.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/single.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/single.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.prod.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.prod.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sellaircraft.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/sellaircraft.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sellaircraft.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/sellaircraft.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.dev.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.dev.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,6 +153,7 @@
   &quot;keyToString&quot;: {
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/philiprudy/Work/marketplace&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;ts.external.directory.path&quot;: &quot;/Users/philiprudy/Work/marketplace/node_modules/typescript/lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
@@ -210,7 +208,12 @@
       <workItem from="1655823017107" duration="596000" />
       <workItem from="1656077126008" duration="313000" />
       <workItem from="1656329779347" duration="15439000" />
-      <workItem from="1656954491139" duration="11104000" />
+      <workItem from="1656954491139" duration="12557000" />
+      <workItem from="1657024168608" duration="684000" />
+      <workItem from="1657060585143" duration="1011000" />
+      <workItem from="1657062625049" duration="26154000" />
+      <workItem from="1657290045423" duration="7411000" />
+      <workItem from="1657730705579" duration="2028000" />
     </task>
     <servers />
   </component>
