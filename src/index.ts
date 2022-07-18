@@ -8,13 +8,8 @@ import { init as Header } from "./components/Header";
 (function init() {
     Header();
 })();
+
 import Splide from '@splidejs/splide';
-import './admin/index';
-import {state, setState} from "./helpers";
-
-
-console.log(state);
-console.log(setState);
 
 var num = 20;
 
@@ -124,6 +119,10 @@ $('.js-update-aircraft, .js-save-aircraft-draft').on('click', function (e) {
     let data = {
         'ID': post_id || 0,
         'post_title': String(title),
+        'condition': String(condition),
+        'price': Number(price),
+        'category': String(category),
+        'year': Number(year),
     }
 
     let baseApi = 'https://dev.flying/wp-json/';
@@ -132,7 +131,6 @@ $('.js-update-aircraft, .js-save-aircraft-draft').on('click', function (e) {
 
     let url = baseApi + namespace + route;
 
-    console.log(data);
     let settings = {
         url: url,
         method: "POST",

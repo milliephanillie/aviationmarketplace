@@ -6,3 +6,6 @@ export const siteName = "site-title";
 export const siteDescription = "site-description";
 export const listings = "listings";
 export const listingsMount = "listings-mount";
+
+//Sell aircraft types
+export const c = "aircraft-types";

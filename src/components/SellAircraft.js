@@ -2,8 +2,7 @@ import axios from "axios";
 
 import { state, setState } from "../state";
 import { getEl } from "../helpers";
-import { siteName, siteDescription } from "../config";
-
+import { aircraftTypes } from "../config";
 
 export function init() {
     getEl(siteName)
@@ -15,7 +14,7 @@ export function init() {
     axios
         .get(state.restUrl)
         .then(({data: apiInfo}) => {
-            setState("siteName", apiInfo.name);
+            setState("airCraftTypes", apiInfo.name);
             setState("siteDescription", apiInfo.description);
             update();
         })
@@ -24,8 +23,7 @@ export function init() {
         });
 }
 
-
 export function update() {
-    getEl(siteName).querySelector("a").innerText = state.siteName;
-    getEl(siteDescription).innerText = state.siteDescription;
+    getEl(aircraftTypes).innerText = state.siteName;
 }
+
