@@ -5,15 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/button.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/button.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/grid.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/grid.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/input.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/input.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/modal.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/modal.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/type.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/type.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sellaircraft.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/sellaircraft.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sellaircraft.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/sellaircraft.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.dev.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.dev.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
