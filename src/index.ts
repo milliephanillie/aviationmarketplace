@@ -1,12 +1,21 @@
 import './css/index.css';
 import * as $ from 'jquery';
-import {wrapper, siteName, main, siteDescription, primary, sidebar} from "./config";
+import {wrapper, siteName, main, siteDescription, primary, sidebar, listingsMount} from "./config";
 import {getEl, removeEl, createEl, isRendered } from "./helpers";
 import {state, setState} from "./state";
 import { init as Header } from "./components/Header";
+import { init as Posts } from "./components/Posts";
+import { init as Authentication } from "./components/Authentication";
+
+console.log("state th index");
 
 (function init() {
-    Header();
+    // if( getEl(listingsMount) ) {
+    //     Posts();
+    // }
+
+    Authentication();
+    Header()
 })();
 
 import Splide from '@splidejs/splide';

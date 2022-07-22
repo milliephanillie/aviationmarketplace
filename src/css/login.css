@@ -9,8 +9,98 @@
   box-sizing: border-box;
 }
 
+#login-button,
+#logout-button {
+  cursor: pointer;
+}
+
+.login {
+  cursor: pointer;
+
+}
+
+.login .welcome {
+font-family:  var(--defaultFonts) ;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: capitalize;
+  letter-spacing: 0.1em;
+}
+
+.login.logged-in  {
+  position: relative;
+}
+
+.login-form-button {
+  position: relative;
+  height: 40px;
+}
+
+.login-form-button:after {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  content: 'continue';
+  text-transform: uppercase;
+}
+
+.login-form-button.loading  {
+  background: var(--textGray);
+}
+
+.login-form-button.loading:after {
+  content: 'loading...';
+}
+
+.login.logged-in + .profile-menu {
+  display: none;
+  position: absolute;
+  background: white;
+  border: 1px solid black;
+  padding: 20px;
+}
+
+.dropdown-menu ul{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  text-align: center;
+}
+.dropdown-menu ul li,
+.dropdown-menu ul li a {
+  color: var(--textblack);
+  font-family: var(--headerFonts);
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.dropdown-menu ul li a {
+  padding: 10px;
+  display: inline-block;
+  width: 100%;
+}
+
+.menu-item.has-children:hover .profile-menu {
+  display: block;
+}
+
 .loginForm button  {
   cursor: pointer;
+}
+
+.loginForm input[type=text],
+.loginForm input[type=password] {
+  margin-bottom: 10px;
 }
 
 .login-aside {
@@ -93,4 +183,16 @@
 .continue-socials button i.fa-brands {
   margin-right: 10px;
   ;
+}
+
+#login-error,
+#login-error p {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.1em;
+}
+
+#login-error i {
+  color: red !important;
 }

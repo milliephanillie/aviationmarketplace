@@ -1,54 +1,4 @@
-<!doctype html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
-
-<header class="sellers nav-header">
-    <div class="container nav-container">
-        <div class="nav-row">
-            <div class="logo">
-                <a class="" href="">
-                    <img src="../static/images/logo-dark.png" alt="FLYING Marketplace" />
-                </a>
-            </div>
-            <nav class="main-nav">
-                <ul class="main-menu">
-                    <li><a href="">BUY</a></li>
-                    <li><a href="">SELL</a></li>
-                </ul>
-                <ul class="user-login">
-                    <li><a href=""><i class="fa-solid fa-user-large"></i></a></li>
-                </ul>
-            </nav>
-            <!--<button class="sm:hidden menu-toggle " id="menu-toggle">-->
-            <!--<span class="inner">-->
-            <!--<span class="lines">-->
-            <!--<span></span>-->
-            <!--<span></span>-->
-            <!--<span></span>-->
-            <!--</span>-->
-            <!--<span class="x">-->
-            <!--<span></span>-->
-            <!--<span></span>-->
-            <!--</span>-->
-            <!--</span>-->
-            <!--</button>-->
-        </div>
-    </div>
-</header>
-
-<section class="sellers-header let-header-overlap">
-    <div class="container">
-        <div class="header text-center">
-            <h1>SELL YOUR AIRCRAFT</h1>
-        </div>
-    </div>
-</section>
-
-<!-- Listing -->
+export const Listing = `
 <section class="sell-input sell-aircraft-input listing-input">
     <div class="container">
         <div class="small-container">
@@ -99,7 +49,9 @@
         </div>
     </div>
 </section>
+`;
 
+export const AddPhotos = `
 <!-- Add Photos -->
 <section class="sell-input sell-aircraft-input add-photos-input">
     <div class="container">
@@ -119,7 +71,9 @@
         </div>
     </div>
 </section>
+`;
 
+export const Aircraft = `
 <!-- Aircraft -->
 <section class="sell-input sell-aircraft-input aircraft-input">
     <div class="container">
@@ -159,7 +113,9 @@
         </div>
     </div>
 </section>
+`;
 
+export const Airframe = `
 <!-- Airframe -->
 <section class="sell-input sell-aircraft-input aircraft-input">
     <div class="container">
@@ -189,32 +145,9 @@
         </div>
     </div>
 </section>
+`;
 
-<!-- Options -->
-<section class="sell-input sell-aircraft-input options-input">
-    <div class="container">
-        <div class="small-container">
-            <div class="airframe form">
-                <div class="section-header"><h3>Options</h3></div>
-
-                <div class="input-row">
-                    <input class="form-field form-filed-num-seats" placeholder="Number of seats" type="number" />
-                </div>
-
-                <div class="input-row">
-                    <div class="checkbox-row">
-                        <label for="wifi">
-                        <input class="form-field form-field-wifi" name="wifi" type="checkbox" />
-                        has WiFi?</label>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-
+export const AdditionalNotes = `
 <!-- Additional Notes -->
 <section class="sell-input sell-aircraft-input additional-notes-input">
     <div class="container">
@@ -244,36 +177,29 @@
         </div>
     </div>
 </section>
+`;
 
-<!-- save input -->
-<section class="sell-input save-input">
-    <div class="input-row">
-        <div class="flex justify-center">
-            <a data-update-type="update" class="js-update-aircraft mr-[10px] button button-red">CONTINUE</a>
-            <a data-update-type="draft" class="js-save-aircraft-draft button">SAVE DRAFT</a>
+export const Options = `
+<!-- Options -->
+<section class="sell-input sell-aircraft-input options-input">
+    <div class="container">
+        <div class="small-container">
+            <div class="airframe form">
+                <div class="section-header"><h3>Options</h3></div>
+
+                <div class="input-row">
+                    <input class="form-field form-filed-num-seats" placeholder="Number of seats" type="number" />
+                </div>
+
+                <div class="input-row">
+                    <div class="checkbox-row">
+                        <label for="wifi">
+                        <input class="form-field form-field-wifi" name="wifi" type="checkbox" />
+                        has WiFi?</label>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
-
-<footer class="sell-input footer">
-    <div class="footer-wrapper container flex justify-center md:justify-space-between flex-wrap">
-        <div class="mb-[10px] md:mb-0 footer-logo flex justify-center md:justify-start flex-wrap w-100 md:w-1/3">
-            <img src="../static/images/flyingmag-logo-black.svg" alt="FLYING black logo">
-        </div>
-        <div class="footer-menu flex justify-end w-100 md:w-2/3">
-            <nav class="footer-nav">
-                <ul>
-                    <li><a href="">About Us</a></li>
-                    <li><a href="">Help center</a></li>
-                    <li><a href="">Terms of use</a></li>
-                    <li><a href="">Privacy policy</a></li>
-                </ul>
-            </nav>
-        </div>
-    </div>
-</footer>
-
-
-<script src="bundle.js"></script>
-</body>
-</html>
+`;

@@ -22,20 +22,22 @@
                     </div>
                 </div>
                 <div class="w-full login-form">
-                    <form class="loginForm">
+                    <form id="login-form" class="loginForm">
                         <div class="subheader">
+                            <div id="login-error">
+                            </div>
                             <div class="form-field">
-                                <input class="username" name="username" type="text"
+                                <input id="username" class="username" name="username" type="text"
                                        placeholder="Username or Email address" value=""/>
                             </div>
                             <div class="form-field">
-                                <input class="password" name="password" type="password" placeholder="Password"
+                                <input id="password" class="password" name="password" type="password" placeholder="Password"
                                        value=""/>
                             </div>
                         </div>
                         <div class="continue">
                             <div class="submit">
-                                <button value="email" class="w-100 button button-red">Continue</button>
+                                <button  id="login-form-button" type="submit" value="email" class="login-form-button w-100 button button-red"></button>
                             </div>
                         </div>
                     </form>

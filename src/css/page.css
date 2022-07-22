@@ -27,3 +27,7 @@
 .marketplace-filters ul li a.current {
   font-weight: 600;
 }
+
+.listings-content {
+  min-height: 885px;
+}

@@ -54,7 +54,7 @@ nav.main-nav  {
   display: flex;
 }
 
-nav.main-nav > ul.main-menu {
+.mp-logged-in nav.main-nav > ul.main-menu {
   margin-top: -3.5px;
 }
 
