@@ -3,23 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1cc4a835-3fbe-4536-909f-a44f1b4e4529" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Posts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Posts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SellAircraft.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SellAircraft.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/item.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/item.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/login.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/nav.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/nav.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/page.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/page.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sellaircraft.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/sellaircraft.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/single.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/single.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/state.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/state.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Authentication.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Authentication.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,15 +139,17 @@
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/philiprudy/Work/marketplace&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Users/philiprudy/Work/marketplace/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/philiprudy/Work/marketplace",
+    "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "/Users/philiprudy/Work/marketplace/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src" />
@@ -225,6 +211,7 @@
       <workItem from="1658178074550" duration="10566000" />
       <workItem from="1658239936929" duration="33137000" />
       <workItem from="1658506127760" duration="6613000" />
+      <workItem from="1658518824318" duration="5276000" />
     </task>
     <servers />
   </component>

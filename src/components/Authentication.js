@@ -100,7 +100,7 @@ export function initLogin() {
         const sendAuthRequest = async () => {
             try {
                 let namespace = "marketplace/v1/";
-                let route =  "get_user";
+                let route = "get_user";
 
                 const authResponse = await axios({
                     method: "post",
@@ -118,14 +118,12 @@ export function initLogin() {
                                 secure: true
                             });
 
-                            console.log(response)
+                            setState("user", creds.username);
 
                             init();
                         } else {
                             loginErrorMsg(loginError, "Oops, that wasn't a match.");
                         }
-
-                        setState("user", creds.username);
 
                         //location();
                         getEl(loginFormButton).classList.remove('loading');
@@ -138,35 +136,33 @@ export function initLogin() {
             }
         }
 
-        //TODO: hit a route for better logging out
+        sendAuthRequest();
 
-        if( state.user == creds.username ) {
+        const sendUserRequest = async () => {
+            try {
+                let namespace = "marketplace/v1/";
+                let route = "get_user";
+                let url = state.restUrl + namespace  + route  +  '?user_login=' + creds.username;
 
-            const sendUserRequest = async () => {
-                try {
-                    let namespace = "marketplace/v1/";
-                    let route =  "get_user";
-
-                    let response = axios.get({
-                        method: "get",
-                        url: state.restUrl + namespace + route,
-                    });
-
-                    console.log("thheeeee     user");
-                    console.log(response);
-                } catch (error) {
-                    //TODO: better error handling
-                    console.error(error)
-                    loginErrorMsg(loginError, "Oops, that wasn't a match.");
-                    getEl(loginFormButton).classList.remove('loading');
-                }
+                let response = await axios.get(url).then(response => {
+                    if ( 200 == response.status ) {
+                        setState("user", response.data)
+                    }
+                });
+            } catch (error) {
+                //TODO: better error handling
+                console.error(error)
+                loginErrorMsg(loginError, "We could not fetch data for the username entered.");
+                getEl(loginFormButton).classList.remove('loading');
             }
-
         }
 
-        sendAuthRequest();
         sendUserRequest();
     });
+
+    if(state.user && state.loggedIn && state.token)  {
+        location();
+    }
 }
 
 /**
@@ -189,7 +185,7 @@ export function initLogout(el) {
  * @param el
  * @param msg
  */
-export function loginErrorMsg(el, msg, remove  = false) {
+export function loginErrorMsg(el, msg, remove = false) {
     if (!msg) {
         let msg = "There was an error";
     }
