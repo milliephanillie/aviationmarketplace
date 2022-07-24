@@ -4,11 +4,10 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ASSET_PATH = process.env.ASSET_PATH || '/';
 
 module.exports = {
-    entry: {
-        index: './src/index.tsx',
-    },
+    entry: './src/index.tsx',
     output: {
-
+        path: path.resolve(__dirname, "./dist"),
+        publicPath: path.resolve(__dirname, "/admin"),
     },
     mode: "development",
     devServer: {
@@ -22,18 +21,9 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.(ts|js)x?$/i,
+                test: /\.tsx?$/,
                 exclude: /node_modules/,
-                use: {
-                    loader: "babel-loader",
-                    options: {
-                        presets: [
-                            "@babel/preset-env",
-                            "@babel/preset-react",
-                            "@babel/preset-typescript",
-                        ],
-                    },
-                },
+                loader: 'ts-loader'
             },
             {
                 test: /\.css$/i,
@@ -46,17 +36,15 @@ module.exports = {
         extensions: [".tsx", ".ts", ".js"],
     },
     plugins: [
-        new CopyPlugin({
-            patterns: [
-                { context: './src/', from: "**/*.html", to: "./", force: true },
-                { from: "static", to: "static" }
-            ],
-        }),
-        // new HtmlWebpackPlugin({
-        //     template: "./src/admin/index.html",
-        //     filename: "./src/admin/index.html",
-        //     publicPath: './admin/',
-        //     inject: true,
-        // })
+        // new CopyPlugin({
+        //     patterns: [
+        //         { context: './src/', from: "**/*.html", to: "./", force: true },
+        //         { from: "static", to: "static" }
+        //     ],
+        // }),
+        new HtmlWebpackPlugin({
+            template: "./src/admin/index.html",
+            inject: true,
+        })
     ],
 };
