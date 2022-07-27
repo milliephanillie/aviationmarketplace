@@ -88,3 +88,12 @@ p {
 .text-white {
   color: white !important;
 }
+
+.more-text,
+.more-text p {
+  font-family: var(--defaultFonts);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+}

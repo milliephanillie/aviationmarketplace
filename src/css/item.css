@@ -58,3 +58,41 @@
 .accord-dd {
   border-top: 1px solid var(--borderColor);
 }
+
+/**account listings items **/
+
+.item-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.item.listing-card {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.item.listing-card  .item-content {
+  padding-left: 20px;
+}
+
+.item.listing-card .item-image {
+  height: 100px;
+  width: 125px
+}
+
+.item-status {
+  padding-top: 20px;
+}
+
+.item-edit {
+  padding-left: 5px;
+}
+
+.item-edit a  {
+  font-family: var(--headerFonts);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.1em;
+}

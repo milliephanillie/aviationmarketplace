@@ -21,3 +21,4 @@ export const loginError = "login-error";
 export const username = "username";
 export const password = "password";
 export const userLogin = "user-login";
+export const accountListings = "account-listings";

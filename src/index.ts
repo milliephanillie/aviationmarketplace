@@ -6,6 +6,7 @@ import {state, setState} from "./state";
 import { init as Header } from "./components/Header";
 import { init as Posts } from "./components/Posts";
 import { init as Authentication } from "./components/Authentication";
+import { init as AccountListings } from "./components/AccountListings";
 
 console.log("state th index");
 
@@ -13,9 +14,10 @@ console.log("state th index");
     // if( getEl(listingsMount) ) {
     //     Posts();
     // }
-
+    Posts();
     Authentication();
-    Header()
+    Header();
+    AccountListings(null);
 })();
 
 import Splide from '@splidejs/splide';

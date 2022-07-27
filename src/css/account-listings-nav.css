@@ -1,0 +1,30 @@
+.account-listings-nav-inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+nav.account-listings-nav ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+nav.account-listings-nav ul li {
+  list-style: none;
+}
+
+nav.account-listings-nav ul li a {
+  color: var(--textGray);
+  font-family: var(--headerFonts);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 15px;
+  display: block;
+  padding-right: 20px;
+  text-transform: uppercase;
+}
+
+nav.account-listings-nav ul li a.active {
+  color: var(--textblack);
+}
