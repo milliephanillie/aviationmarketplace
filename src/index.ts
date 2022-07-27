@@ -2,15 +2,15 @@ import './css/index.css';
 import * as $ from 'jquery';
 import {wrapper, siteName, main, siteDescription, primary, sidebar} from "./config";
 import {getEl, removeEl, createEl, isRendered } from "./helpers";
-import {state, setState} from "./state";
 import { init as Header } from "./components/Header";
+import {render as Editor} from "./components/Editor";
+import Splide from '@splidejs/splide';
+import {state, setState} from "./state";
+
 
 (function init() {
-    Header();
+    Editor();
 })();
-import Splide from '@splidejs/splide';
-import './admin/index';
-import {state, setState} from "./helpers";
 
 
 console.log(state);
