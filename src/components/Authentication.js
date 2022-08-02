@@ -5,7 +5,17 @@ import {Routes, ProtectedRoutes} from "./Routes";
 
 import {state, setState} from "../state";
 import {getEl, createEl} from "../helpers";
-import {loginBtn, logoutBtn, loginForm, loginFormButton, username, password, loginError} from "../config";
+import {
+    loginBtn,
+    logoutBtn,
+    loginForm,
+    loginFormButton,
+    username,
+    fontPasswordInput,
+    fontPasswordIcon,
+    password,
+    loginError,
+} from "../config";
 
 import {init as Posts} from "./Posts";
 import {updateLogin} from "./Header";
@@ -41,7 +51,7 @@ export function initLoginRedirect() {
     }
 
     let redirectPath = window.location.pathname;
-    redirectPath = (redirectPath != Routes.login) ? redirectPath : Routes.home;
+    redirectPath = (redirectPath != Routes.login && redirectPath != Routes.logout) ? redirectPath : Routes.home;
 
     Cookies.set("location-from", redirectPath, {
         secure: true
@@ -76,6 +86,35 @@ export function logout() {
  * Event handler, adds a submit listener to the login form that gets a JWT token, a user, a list of user posts, and then sets the loggin, token, and user states.
  */
 export function initLogin() {
+    const passwordInput = getEl(fontPasswordInput);
+    const showPasswordButton = getEl(fontPasswordIcon);
+
+    console.log(showPasswordButton)
+
+    if(showPasswordButton && passwordInput) {
+        console.log("passwordInput");
+        console.log(passwordInput);
+        showPasswordButton.addEventListener("click", event => {
+            event.preventDefault();
+
+            console.log("showPasswordButton was just clickied");
+
+            console.log(showPasswordButton.classList);
+
+            showPasswordButton.classList = '';
+
+            if (passwordInput.getAttribute("type") === "password") {
+                passwordInput.setAttribute("type", "text");
+
+                showPasswordButton.classList.add('fa-eye', 'fa-solid');
+            } else {
+                passwordInput.setAttribute("type", "password");
+                showPasswordButton.classList.add('fa-eye-low-vision', 'fa-solid');
+            }
+
+        });
+    }
+
     getEl(loginForm).addEventListener("submit", event => {
         event.preventDefault();
 
@@ -86,6 +125,9 @@ export function initLogin() {
             username: getEl(username).value,
             password: getEl(password).value,
         }
+
+        console.log(creds.username);
+        console.log(creds.password);
 
         if (!creds.username || !creds.password) {
             loginErrorMsg(loginError, "Please enter a username and password.");
@@ -118,6 +160,8 @@ export function initLogin() {
                                 secure: true
                             });
 
+                            console.log("we made it to authentication")
+
                             setState("user", creds.username);
 
                             init();
@@ -138,15 +182,39 @@ export function initLogin() {
 
         sendAuthRequest();
 
+        console.log("here we are before some states")
+
         const sendUserRequest = async () => {
             try {
                 let namespace = "marketplace/v1/";
                 let route = "get_user";
                 let url = state.restUrl + namespace  + route  +  '?user_login=' + creds.username;
 
-                let response = await axios.get(url).then(response => {
+                console.log("here we are inside some states")
+                console.log(url)
+
+                const responseUser = await axios.get(url).then(response => {
+                    console.log("response inside user request")
+                    console.log(response)
                     if ( 200 == response.status ) {
                         setState("user", response.data)
+                        setState("loggedIn", true);
+                        init();
+                    }
+                    console.log("ok the state?")
+
+                    console.log(state);
+
+                    console.log("here we have some states")
+                    console.log("state.user")
+                    console.log(state.user)
+                    console.log("state.loggedIn")
+                    console.log(state.loggedIn)
+                    console.log(state.token)
+                    console.log("state.token")
+
+                    if(state.user && state.loggedIn && state.token)  {
+                        location();
                     }
                 });
             } catch (error) {
@@ -159,10 +227,6 @@ export function initLogin() {
 
         sendUserRequest();
     });
-
-    if(state.user && state.loggedIn && state.token)  {
-        location();
-    }
 }
 
 /**
@@ -171,28 +235,18 @@ export function initLogin() {
 export function initLogout(el) {
     let element = el || getEl(logoutBtn);
 
+    if(! element ) {
+        return;
+    }
+
     element.addEventListener("click", event => {
         event.preventDefault()
 
         Cookies.remove(state.token, {secure: true});
         init();
+
+        window.location.replace("logout.html");
     });
-}
-
-/**
- * Displays an error message when failed login attempts happen
- *
- * @param el
- * @param msg
- */
-export function loginErrorMsg(el, msg, remove = false) {
-    if (!msg) {
-        let msg = "There was an error";
-    }
-
-    let icon = '<i class="fa-solid fa-circle-exclamation"></i>';
-
-    getEl(el).innerHTML = "<p>" + icon + " " + msg + "</p>";
 }
 
 /**
@@ -233,4 +287,20 @@ export function clearHTML(el) {
     if (el) {
         getEl(el).innerHTML = '';
     }
+}
+
+/**
+ * Displays an error message when failed login attempts happen
+ *
+ * @param el
+ * @param msg
+ */
+export function loginErrorMsg(el, msg, remove = false) {
+    if (!msg) {
+        let msg = "There was an error";
+    }
+
+    let icon = '<i class="fa-solid fa-circle-exclamation"></i>';
+
+    getEl(el).innerHTML = "<p>" + icon + " " + msg + "</p>";
 }

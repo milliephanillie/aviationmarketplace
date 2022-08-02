@@ -1,3 +1,7 @@
+.account-listings-nav {
+  display: flex;
+  align-items: center;
+}
 .account-listings-nav-inner {
   display: flex;
   justify-content: space-between;

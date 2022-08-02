@@ -12,6 +12,7 @@
   padding: 10px;
   display: block;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 .marketplace-filters ul li,

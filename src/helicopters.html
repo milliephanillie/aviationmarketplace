@@ -48,9 +48,9 @@
         <div class="row">
             <div id="listings-filters" class="marketplace-filters display-flex justify-center">
                 <ul class="display-flex justify-center">
-                    <li><a class="category-filter current" data-cat="">All</a></li>
+                    <li><a class="category-filter" data-cat="">All</a></li>
                     <li><a class="category-filter" data-cat="Jets">Jets</a></li>
-                    <li><a class="category-filter" data-cat="Helicopters">Helicopters</a></li>
+                    <li><a class="category-filter current" data-cat="Helicopters">Helicopters</a></li>
                     <li><a class="category-filter" data-cat="commercial_real_estate">Commercial Real Estate</a></li>
                     <li><a class="category-filter" data-cat="residential_real_estate">Residential Real Estate</a></li>
                 </ul>
@@ -409,5 +409,11 @@
     </div>
 </footer>
 <script src="bundle.js"></script>
+
+<script type="text/javascript">
+    var wp_object = {
+        aircraftType: 'jets',
+    }
+</script>
 </body>
 </html>

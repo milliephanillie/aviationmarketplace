@@ -1,6 +1,6 @@
 import './css/index.css';
 import * as $ from 'jquery';
-import {wrapper, siteName, main, siteDescription, primary, sidebar, listingsMount} from "./config";
+import {wrapper, siteName, main, siteDescription, primary, sidebar, listingsMount, accountListings} from "./config";
 import {getEl, removeEl, createEl, isRendered } from "./helpers";
 import {state, setState} from "./state";
 import { init as Header } from "./components/Header";
@@ -11,13 +11,17 @@ import { init as AccountListings } from "./components/AccountListings";
 console.log("state th index");
 
 (function init() {
-    // if( getEl(listingsMount) ) {
-    //     Posts();
-    // }
-    Posts();
     Authentication();
     Header();
-    AccountListings(null);
+
+    if( getEl(listingsMount) ) {
+        console.log("posts should be happening")
+        Posts();
+    }
+
+    if(getEl(accountListings)) {
+        AccountListings(null);
+    }
 })();
 
 import Splide from '@splidejs/splide';

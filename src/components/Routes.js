@@ -2,7 +2,9 @@ export const Routes = {
     home: "/index.html",
     page: "/page.html",
     single: "/single.html",
-    login: "/login.html"
+    login: "/login.html",
+    logout: "/logout.html",
+    accountListings: "/account-listings.html"
 }
 
 export const ProtectedRoutes  = {

@@ -196,3 +196,25 @@ font-family:  var(--defaultFonts) ;
 #login-error i {
   color: red !important;
 }
+
+/** login password **/
+
+.font-password {
+  position: relative;
+}
+
+.font-password i {
+  position: absolute;
+  right: 10px;
+  top: 12px;
+  cursor: pointer;
+}
+
+.logout-confirmed {
+  background: #ccfdce;
+}
+
+.logout-confirmed a,
+.logout-confirmed  h3 {
+  color: var(--textblack);
+}

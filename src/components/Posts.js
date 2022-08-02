@@ -4,55 +4,115 @@ import axios from "axios";
 import { render as Post } from "./Post";
 
 import {state, setState} from "../state";
-import {getEl, createEl} from "../helpers";
-import {listingsMount} from "../config";
+import {getEl, createEl, removeEl} from "../helpers";
+import {listingsError, listingsFilters, listingsMount, loginFormButton} from "../config";
+import {loginErrorMsg} from "./Authentication";
+import {list} from "postcss";
+import {expr} from "jquery";
 
 
-export function init(event) {
+export function init(event, aircraftType = null) {
     if (event) event.preventDefault()
 
+    console.log("INIT POSTS");
+
+    initFilters();
+    getPosts(aircraftType);
+}
+
+export function getPosts(aircraftType = null, user_id = null, post_status = 'any') {
+    console.log("get posts is happening")
     let route = "marketplace/v1/get_aircraft";
     let restUrl = state.restUrl + route;
 
-    axios
-        .get(restUrl, {
-        params: {
-            per_page: 5,
+    console.log("aircraftType");
+    console.log(aircraftType);
+
+    const sendPostsRequest = async () => {
+        let loaderWrapper = createEl('div');
+        loaderWrapper.id = "loader-wrapper";
+        loaderWrapper.classList.add('fa-3x', 'loader-wrapper');
+
+        let loader = createEl('i')
+        loader.classList.add('fas', 'fa-circle-notch', 'fa-spin');
+        loaderWrapper.appendChild(loader);
+
+        getEl(listingsMount).insertBefore(loaderWrapper, getEl(listingsError));
+
+        try {
+            console.log("axios calllllll");
+            const postsRequest = await axios
+                .get(restUrl, {
+                    params: {
+                        per_page: 5,
+                        aircraft_type: aircraftType,
+                    },
+                    timeout: 4000,
+                })
+                .then(({data: aircraft}) => {
+                    console.log("axios calllllll then");
+                    console.log(aircraft);
+                    getEl(listingsMount).removeChild(loaderWrapper);
+
+                    if(aircraft.error) {
+                        let message = aircraft.error;
+                        listingErrorMsg(listingsError, message)
+                    } else {
+                        setState("aircraft", aircraft.posts)
+                        render();
+                    }
+                })
+        } catch(error) {
+            //TODO: better error handling
+            console.error("errorrrorororor")
+            console.error(error)
+            getEl(listingsMount).removeChild(loaderWrapper);
+            let message = error.message;
+            listingErrorMsg(listingsError, message)
+
+            // loginErrorMsg(loginError, "We could not fetch data for the username entered.");
+            // getEl(loginFormButton).classList.remove('loading');
         }
-    })
-        .then(({data: aircraft}) => {
-            setState("aircraft", aircraft.posts)
-            render();
-        })
+    }
+
+    sendPostsRequest();
+
+    console.log("axios calllllll end");
 }
 
 
 export function render()   {
     clear();
 
+    if( ! state.aircraft ) {
+        return;
+    }
+
+    let grid = createEl('div');
+    grid.classList.add('do-4');
+    getEl(listingsMount).appendChild(grid);
+
     state.aircraft.map(aircraft => {
         const listing = createEl("div")
         listing.classList.add("item")
         listing.innerHTML = `
             <div class="item-inner">
-                <div class="item-image">
-                    <a href="">
-                        <img src="${aircraft.thumbnail_url}" alt="Airplane"/>
-                    </a>
+                <div class="item-image" style="background: url('${aircraft.thumbnail_url}'); background-size:cover;">
+                    <a class="item-image-link"></a>
                 </div>
                 <div class="item-content">
                     <div class="product-tag mb-5px">
-                        <span>JET – 2014</span>
-                        <span class="featured">FEATURED</span>
+                        <span>${aircraft.category} ${aircraft.year ? '- ' + aircraft.year : '' }</span>
+                        ${aircraft.listing_promotion ? `<span class="featured">FEATURED</span>` : ''} 
                     </div>
                     <div class="item-body">
-                        <h4 class="m-0"><a href="#">Bombardier Challenger 300</a></h4>
+                        <h4 class="m-0"><a href="#">${aircraft.title}</a></h4>
                         <div class="item-company">
-                            <p class="caption">Avpro Inc.</p>
+                            <p class="caption">${aircraft.seller}</p>
                         </div>
                     </div>
                     <div class="price">
-                        <span class="tagged">$12,495,000</span>
+                        <span class="tagged">${aircraft.price_tag}</span>
                     </div>
                 </div>
             </div>
@@ -65,10 +125,55 @@ export function render()   {
             Post();
         });
 
-        getEl(listingsMount).append(listing);
+        grid.append(listing);
     })
+}
+
+export function initFilters() {
+    console.log("categoryFilters")
+    if(getEl(listingsFilters)) {
+        console.log("categoryFilters 2")
+        let categoryFilters = document.querySelectorAll(".category-filter");
+
+        console.log("categoryFilters")
+        console.log(categoryFilters)
+
+        categoryFilters.forEach(filter => {
+            filter.addEventListener("click", event => {
+                event.preventDefault();
+                categoryFilters.forEach(element => {
+                    element.classList.remove('current');
+                })
+                filter.classList.add('current');
+                console.log(filter.getAttribute('data-cat'));
+                clear();
+                let errorDiv = createEl('div');
+                errorDiv.id = listingsError;
+                getEl(listingsMount).append(errorDiv);
+                getPosts(filter.getAttribute('data-cat'));
+            })
+        });
+    }
 }
 
 export function clear() {
     getEl(listingsMount).innerHTML = "";
 }
+
+/**
+ * Displays an error message when failed api requests
+ *
+ * @param el
+ * @param msg
+ */
+export function listingErrorMsg(el, msg, remove = false) {
+    if (!msg) {
+        let msg = "There was an error";
+    }
+
+    let icon = '<i class="fa-solid fa-circle-exclamation"></i>';
+
+    getEl(el).innerHTML = "<p>" + icon + " " + msg + "</p>";
+}
+
+

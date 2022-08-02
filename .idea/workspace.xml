@@ -1,13 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="1cc4a835-3fbe-4536-909f-a44f1b4e4529" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/account-listings.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/account-listings.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Authentication.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Authentication.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Posts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Posts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/html/Header.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/html/Header.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/html/Login.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/html/Login.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/html/ProfileDropDown.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/html/ProfileDropDown.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/account-listings-nav.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/account-listings-nav.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/css/item.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/item.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/type.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/type.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/page.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/page.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/promotion.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/promotion.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sell.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/sell.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sellaircraft.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/sellaircraft.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sellrealestate.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/sellrealestate.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/settings.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/settings.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/single.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/single.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +39,14 @@
   </component>
   <component name="ComposerSettings">
     <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -143,19 +174,22 @@
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/philiprudy/Work/marketplace&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Users/philiprudy/Work/marketplace/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/MAMP/htdocs/aviationmarketplace/src/static/images",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "C:\\MAMP\\htdocs\\aviationmarketplace\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\MAMP\htdocs\aviationmarketplace\src\static\images" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/static/images" />
       <recent name="$PROJECT_DIR$/src/static/images" />
@@ -263,6 +297,18 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/config.js</url>
+          <line>27</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/dist/css/indexc1dfd7e7657f201322bd.css" />
