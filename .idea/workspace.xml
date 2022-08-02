@@ -6,31 +6,25 @@
   <component name="ChangeListManager">
     <list default="true" id="1cc4a835-3fbe-4536-909f-a44f1b4e4529" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/account-listings.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/account-listings.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Authentication.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Authentication.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Posts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Posts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/html/Header.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/html/Header.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/html/Login.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/html/Login.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/html/ProfileDropDown.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/html/ProfileDropDown.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/account-listings-nav.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/account-listings-nav.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/item.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/item.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/login.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/page.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/page.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/promotion.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/promotion.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jets.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/jets.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/login.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/profile.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/profile.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/promotion.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/promotion.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sell.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/sell.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sellaircraft.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/sellaircraft.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sellrealestate.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/sellrealestate.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/settings.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/settings.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/single.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/single.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sell.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/sell.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sellrealestate.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/sellrealestate.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/settings.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/settings.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/single.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/single.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/state.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/state.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/turboprops.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/turboprops.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.prod.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.prod.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -180,7 +174,9 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/MAMP/htdocs/aviationmarketplace/src/static/images",
+    "last_opened_file_path": "C:/MAMP/htdocs/aviationmarketplace/static/images",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "ts.external.directory.path": "C:\\MAMP\\htdocs\\aviationmarketplace\\node_modules\\typescript\\lib",
@@ -189,18 +185,18 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\MAMP\htdocs\aviationmarketplace\static\images" />
       <recent name="C:\MAMP\htdocs\aviationmarketplace\src\static\images" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/static/images" />
       <recent name="$PROJECT_DIR$/src/static/images" />
-      <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\MAMP\htdocs\aviationmarketplace\src\static" />
+      <recent name="C:\MAMP\htdocs\aviationmarketplace\src\static\images" />
       <recent name="$PROJECT_DIR$/src/static/images" />
       <recent name="$PROJECT_DIR$/src/static" />
       <recent name="$PROJECT_DIR$/static/images" />
-      <recent name="$PROJECT_DIR$/static" />
-      <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -252,6 +248,7 @@
       <workItem from="1658518824318" duration="5276000" />
       <workItem from="1658696197723" duration="8874000" />
       <workItem from="1658757538714" duration="143000" />
+      <workItem from="1659471431273" duration="665000" />
     </task>
     <servers />
   </component>
@@ -304,8 +301,12 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/config.js</url>
           <line>27</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/webpack.prod.js</url>
+          <line>109</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

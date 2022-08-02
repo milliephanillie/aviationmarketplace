@@ -42,7 +42,7 @@
   },
   "scripts": {
     "start": "webpack serve --mode=development --open --config webpack.dev.js",
-    "build": "export NODE_ENV=production && webpack --config webpack.prod.js"
+    "build": "webpack --node-env production --config webpack.prod.js"
   },
   "keywords": [],
   "author": "",

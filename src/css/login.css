@@ -218,3 +218,7 @@ font-family:  var(--defaultFonts) ;
 .logout-confirmed  h3 {
   color: var(--textblack);
 }
+
+.form-field {
+  margin-bottom: 10px;
+}

@@ -20,13 +20,14 @@ export function init(event, aircraftType = null) {
     getPosts(aircraftType);
 }
 
-export function getPosts(aircraftType = null, user_id = null, post_status = 'any') {
+export function getPosts(aircraftType = '', user_id = null, post_status = 'any') {
     console.log("get posts is happening")
     let route = "marketplace/v1/get_aircraft";
     let restUrl = state.restUrl + route;
+    const aircraft_type = aircraftType;
 
     console.log("aircraftType");
-    console.log(aircraftType);
+    console.log(restUrl);
 
     const sendPostsRequest = async () => {
         let loaderWrapper = createEl('div');
@@ -44,10 +45,10 @@ export function getPosts(aircraftType = null, user_id = null, post_status = 'any
             const postsRequest = await axios
                 .get(restUrl, {
                     params: {
-                        per_page: 5,
-                        aircraft_type: aircraftType,
+                        per_page: 7,
+                        aircraft_type: aircraft_type,
                     },
-                    timeout: 4000,
+                    timeout: 6000,
                 })
                 .then(({data: aircraft}) => {
                     console.log("axios calllllll then");
@@ -106,7 +107,7 @@ export function render()   {
                         ${aircraft.listing_promotion ? `<span class="featured">FEATURED</span>` : ''} 
                     </div>
                     <div class="item-body">
-                        <h4 class="m-0"><a href="#">${aircraft.title}</a></h4>
+                        <h4 class="m-0"><a href="single.html">${aircraft.title}</a></h4>
                         <div class="item-company">
                             <p class="caption">${aircraft.seller}</p>
                         </div>

@@ -1,10 +1,94 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/index.css" rel="stylesheet">
 </head>
 <body>
 
+<header class="nav-header black">
+    <div class="container nav-container">
+        <div class="nav-row">
+            <div class="logo">
+                <a class="logo-link" href="/index.html">
+                    <img src="../static/images/flying-markets.svg"
+                         alt="FLYING Marketplace" />
+                </a>
+            </div>
+            <nav class="main-nav">
+                <ul class="main-menu">
+                    <li><a href="/page.html">BUY</a></li>
+                    <li><a href="/sell.html">SELL</a></li>
+                </ul>
+                <ul id="user-login" class="user-login">
+                    <!-- dynamically populate  -->
+                </ul>
+            </nav>
+            <!--<button class="sm:hidden menu-toggle " id="menu-toggle">-->
+            <!--<span class="inner">-->
+            <!--<span class="lines">-->
+            <!--<span></span>-->
+            <!--<span></span>-->
+            <!--<span></span>-->
+            <!--</span>-->
+            <!--<span class="x">-->
+            <!--<span></span>-->
+            <!--<span></span>-->
+            <!--</span>-->
+            <!--</span>-->
+            <!--</button>-->
+        </div>
+    </div>
+</header>
+
+<section class="listings let-header-overlap">
+    <div class="container">
+        <div class="listings-title row"><h3>Featured Listings</h3></div>
+        <div class="row">
+            <div id="listings-filters" class="marketplace-filters display-flex justify-center">
+                <ul class="display-flex justify-center">
+                    <li><a class="category-filter" data-cat="">All</a></li>
+                    <li><a class="category-filter" data-cat="Jets">Jets</a></li>
+                    <li><a class="category-filter" data-cat="Helicopters">Helicopters</a></li>
+                    <li><a class="category-filter current" data-cat="Jets">Turboprops</a></li>
+                    <li><a class="category-filter" data-cat="Helicopters">Pistons</a></li>
+                    <li><a class="category-filter" data-cat="commercial_real_estate">Commercial Real Estate</a></li>
+                    <li><a class="category-filter" data-cat="residential_real_estate">Residential Real Estate</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div id="listings-mount" class="listings-mount listings-content">
+                <div id="listings-error"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="footer-wrapper container flex justify-center md:justify-space-between flex-wrap">
+        <div class="mb-[10px] md:mb-0 footer-logo flex justify-center md:justify-start flex-wrap w-100 md:w-1/3">
+            <img src="../static/images/flyingmag-logo-black.svg" alt="FLYING black logo">
+        </div>
+        <div class="footer-menu flex justify-end w-100 md:w-2/3">
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="">About Us</a></li>
+                    <li><a href="">Help center</a></li>
+                    <li><a href="">Terms of use</a></li>
+                    <li><a href="">Privacy policy</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</footer>
+<script src="bundle.js"></script>
+
+<script type="text/javascript">
+    var wp_object = {
+        aircraftType: 'jets',
+    }
+</script>
 </body>
 </html>
