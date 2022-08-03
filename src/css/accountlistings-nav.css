@@ -1,23 +1,23 @@
-.account-listings-nav {
+.accountlistings-nav {
   display: flex;
   align-items: center;
 }
-.account-listings-nav-inner {
+.accountlistings-nav-inner {
   display: flex;
   justify-content: space-between;
 }
 
-nav.account-listings-nav ul {
+nav.accountlistings-nav ul {
   padding: 0;
   margin: 0;
   display: flex;
 }
 
-nav.account-listings-nav ul li {
+nav.accountlistings-nav ul li {
   list-style: none;
 }
 
-nav.account-listings-nav ul li a {
+nav.accountlistings-nav ul li a {
   color: var(--textGray);
   font-family: var(--headerFonts);
   font-style: normal;
@@ -29,6 +29,6 @@ nav.account-listings-nav ul li a {
   text-transform: uppercase;
 }
 
-nav.account-listings-nav ul li a.active {
+nav.accountlistings-nav ul li a.active {
   color: var(--textblack);
 }

@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { WebpackManifestPlugin } = require('webpack-manifest-plugin');
 
-let htmlPageNames = ['page', 'single', 'login', 'logout', 'turboprops', 'jets', 'pistons', 'helicopters', 'profile', 'sellaircraft', 'sellrealestate', 'sell', 'settings', 'promotion', 'profile'];
+let htmlPageNames = ['page', 'single', 'login', 'logout', 'turboprops', 'jets', 'pistons', 'helicopters', 'profile', 'sellaircraft', 'sellrealestate', 'sell', 'settings', 'promotion', 'profile', 'accountlistings'];
 
 let multipleHtmlPlugins = htmlPageNames.map(name => {
     return new HtmlWebpackPlugin({
@@ -26,6 +26,7 @@ module.exports = (env) => {
     return {
         entry: {
             index: "./src/index.ts",
+            accountlistings: "./src/accountlistings.ts",
             page: "./src/page.ts",
             single: "./src/single.ts",
             login: "./src/login.ts",
@@ -38,10 +39,11 @@ module.exports = (env) => {
             jets: "./src/jets.ts",
             turboprops: "./src/turboprops.ts",
             helicopters: "./src/helicopters.ts",
-            login: ".src/login.ts",
-            logout: ".src/logout.ts",
+            login: "./src/login.ts",
+            logout: "./src/logout.ts",
         },
         mode: "production",
+        devtool: "inline-source-map",
         devServer: {
             watchFiles: ["src/**/*"],
             proxy: {
@@ -53,6 +55,11 @@ module.exports = (env) => {
         },
         module: {
             rules: [
+                {
+                    test: /\.(js|ts|tsx)$/,
+                    enforce: "pre",
+                    use: ["source-map-loader"],
+                },
                 {
                     test: /\.tsx?$/,
                     use: "ts-loader",

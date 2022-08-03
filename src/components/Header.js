@@ -2,7 +2,7 @@ import axios from "axios";
 
 import {state, setState} from "../state";
 import {getEl} from "../helpers";
-import {siteName, siteDescription, userLogin, logoutBtn} from "../config";
+import {siteName, siteDescription, userLogin, logoutBtn, loginForm} from "../config";
 import {isAuth, initLogout} from "./Authentication";
 
 import {LoggedOutLink, LoggedInLink} from "./html/Login";
@@ -35,7 +35,9 @@ export function update() {
 }
 
 export function updateLogin() {
-    if( window.location.pathname != Routes.login ) {
+    console.log("update login")
+    if( ! getEl(loginForm) ) {
+        console.log("update inner login")
         let loginHtml = (isAuth()) ? LoggedInLink : LoggedOutLink;
 
         getEl(userLogin).innerHTML = loginHtml;

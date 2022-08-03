@@ -1,17 +1,17 @@
 export const Routes = {
-    home: "/index.html",
-    page: "/page.html",
-    single: "/single.html",
-    login: "/login.html",
-    logout: "/logout.html",
-    accountListings: "/account-listings.html"
+    home: "/marketplace/index.html",
+    page: "/marketplace/page.html",
+    single: "/marketplace/single.html",
+    login: "/marketplace/login.html",
+    logout: "/marketplace/logout.html",
+    accountListings: "/marketplace/accountlistings.html"
 }
 
 export const ProtectedRoutes  = {
-    profile: "/profile.html",
-    promotion: "/promotion.html",
-    sell: "/sell.html",
-    sellaircraft: "/sellaircraft.html",
-    sellrealestate: "/sellrealestate.html",
-    settings: "/settings.html",
+    profile: "/marketplace/profile.html",
+    promotion: "/marketplace/promotion.html",
+    sell: "/marketplace/sell.html",
+    sellaircraft: "/marketplace/sellaircraft.html",
+    sellrealestate: "/marketplace/sellrealestate.html",
+    settings: "/marketplace/settings.html",
 }

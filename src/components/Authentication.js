@@ -137,7 +137,9 @@ export function initLogin() {
 
         getEl(loginFormButton).classList.add('loading');
 
-        clearHTML(loginError);
+        if(getEl(loginError)) {
+            clearHTML(loginError);
+        }
 
         const sendAuthRequest = async () => {
             try {
@@ -254,6 +256,7 @@ export function initLogout(el) {
  */
 export function location() {
     if (state.location.from == Routes.login) {
+        window.location.href = Routes.home;
         return;
     }
 
