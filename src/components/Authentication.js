@@ -89,6 +89,7 @@ export function initLogin() {
     const passwordInput = getEl(fontPasswordInput);
     const showPasswordButton = getEl(fontPasswordIcon);
 
+    console.log("showPasswordButton")
     console.log(showPasswordButton)
 
     if(showPasswordButton && passwordInput) {

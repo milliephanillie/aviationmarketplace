@@ -15,6 +15,7 @@ const state = {
     restUrl: "https://staging.flyingmag.com/wp-json/",
     siteName: "Aviation Marketplace by FLYING",
     siteDescription: "Aviation marketplace",
+
 }
 
 const setState = (toSet, newValue) => {

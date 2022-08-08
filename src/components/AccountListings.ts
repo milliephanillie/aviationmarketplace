@@ -21,6 +21,7 @@ export function addEventListeners() {
     listingFilters.forEach(filter => {
         filter.addEventListener("click", event => {
             event.preventDefault()
+            console.log("we clicked an inner filter")
             console.log(this.getAttribute('data-filter'));
         })
     });
