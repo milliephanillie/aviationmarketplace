@@ -88,7 +88,7 @@ export function render()   {
         listing.innerHTML = `
             <div class="item-inner">
                 <div class="item-image" style="background: url('${aircraft.thumbnail_url}'); background-size:cover;">
-                    <a class="item-image-link" href="/single.html"></a>
+                    <a class="item-image-link" href="https://staging.flyingmag.com/marketplace/single.html"></a>
                 </div>
                 <div class="item-content">
                     <div class="product-tag mb-5px">
@@ -96,7 +96,7 @@ export function render()   {
                         ${aircraft.listing_promotion ? `<span class="featured">FEATURED</span>` : ''} 
                     </div>
                     <div class="item-body">
-                        <h4 class="m-0"><a href="/single.html">${aircraft.title}</a></h4>
+                        <h4 class="m-0"><a href="https://staging.flyingmag.com/marketplace/single.html">${aircraft.title}</a></h4>
                         <div class="item-company">
                             <p class="caption">${aircraft.seller}</p>
                         </div>
