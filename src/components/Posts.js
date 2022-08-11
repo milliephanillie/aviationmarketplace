@@ -6,9 +6,7 @@ import { render as Post } from "./Post";
 import {state, setState} from "../state";
 import {getEl, createEl, removeEl} from "../helpers";
 import {listingsError, listingsFilters, listingsMount, loginFormButton} from "../config";
-import {loginErrorMsg} from "./Authentication";
-import {list} from "postcss";
-import {expr} from "jquery";
+import {loading} from './Loading';
 
 
 export function init(event, aircraftType = null) {
@@ -30,29 +28,20 @@ export function getPosts(aircraftType = '', user_id = null, post_status = 'any')
     console.log(restUrl);
 
     const sendPostsRequest = async () => {
-        let loaderWrapper = createEl('div');
-        loaderWrapper.id = "loader-wrapper";
-        loaderWrapper.classList.add('fa-3x', 'loader-wrapper');
-
-        let loader = createEl('i')
-        loader.classList.add('fas', 'fa-circle-notch', 'fa-spin');
-        loaderWrapper.appendChild(loader);
+        const loaderWrapper = loading();
 
         getEl(listingsMount).insertBefore(loaderWrapper, getEl(listingsError));
 
         try {
-            console.log("axios calllllll");
             const postsRequest = await axios
                 .get(restUrl, {
                     params: {
                         per_page: 7,
                         aircraft_type: aircraft_type,
                     },
-                    timeout: 6000,
+                    timeout: 10000,
                 })
                 .then(({data: aircraft}) => {
-                    console.log("axios calllllll then");
-                    console.log(aircraft);
                     getEl(listingsMount).removeChild(loaderWrapper);
 
                     if(aircraft.error) {
@@ -99,7 +88,7 @@ export function render()   {
         listing.innerHTML = `
             <div class="item-inner">
                 <div class="item-image" style="background: url('${aircraft.thumbnail_url}'); background-size:cover;">
-                    <a class="item-image-link" href="https://staging.flyingmag.com/marketplace/single.html"></a>
+                    <a class="item-image-link" href="/single.html"></a>
                 </div>
                 <div class="item-content">
                     <div class="product-tag mb-5px">
@@ -107,7 +96,7 @@ export function render()   {
                         ${aircraft.listing_promotion ? `<span class="featured">FEATURED</span>` : ''} 
                     </div>
                     <div class="item-body">
-                        <h4 class="m-0"><a href="https://staging.flyingmag.com/marketplace/single.html">${aircraft.title}</a></h4>
+                        <h4 class="m-0"><a href="/single.html">${aircraft.title}</a></h4>
                         <div class="item-company">
                             <p class="caption">${aircraft.seller}</p>
                         </div>

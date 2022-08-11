@@ -29,4 +29,8 @@ export const fontPasswordInput = "password" // to manage the show password toggl
 export const fontPasswordIcon = "font-password-icon";
 export const password = "password";
 export const userLogin = "user-login";
-export const accountListings = "accountlistings";
+
+
+//admin
+export const accountListingsNav = "accountlistings-nav";
+export const accountListingsMount = "accountlistings-mount";

@@ -27,6 +27,7 @@ nav.accountlistings-nav ul li a {
   display: block;
   padding-right: 20px;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 nav.accountlistings-nav ul li a.active {

@@ -1,6 +1,16 @@
 import './css/index.css';
 import * as $ from 'jquery';
-import {wrapper, siteName, main, siteDescription, primary, sidebar, listingsMount, accountListings} from "./config";
+import {
+    wrapper,
+    siteName,
+    main,
+    siteDescription,
+    primary,
+    sidebar,
+    listingsMount,
+    accountListingsMount
+} from "./config";
+
 import {getEl, removeEl, createEl, isRendered } from "./helpers";
 import {state, setState} from "./state";
 import { init as Header } from "./components/Header";
@@ -19,7 +29,7 @@ console.log("state th index");
         Posts();
     }
 
-    if(getEl(accountListings)) {
+    if(getEl(accountListingsMount)) {
         AccountListings(null);
     }
 })();

@@ -9,17 +9,17 @@ export const Header = `
             </div>
             <nav class="main-nav">
                 <ul class="main-menu">
-                    <li><a href="https://staging.flyingmag.com/marketplace/page.html">BUY</a></li>
-                    <li><a href="https://staging.flyingmag.com/marketplace/sell.html">SELL</a></li>
+                    <li><a href="/page.html">BUY</a></li>
+                    <li><a href="/sell.html">SELL</a></li>
                 </ul>
                 <ul class="user-login">
                     <li class="menu-item has-children"><a id="loginBtn" class="login logged-in"><i class="fa-solid fa-user-large"></i></a>
                     <div class="dropdown-menu profile-menu">
                         <ul>
-                            <li><a href="https://staging.flyingmag.com/marketplace/profile.html">Profile</a></li>
-                            <li><a href="https://staging.flyingmag.com/marketplace/accountlistings.html">Listings</a></li>
+                            <li><a href="/profile.html">Profile</a></li>
+                            <li><a href="/accountlistings.html">Listings</a></li>
                             <li><a href="">Watchlist</a></li>
-                            <li><a href="https://staging.flyingmag.com/marketplace/settings.html">Settings</a></li>
+                            <li><a href="/settings.html">Settings</a></li>
                         </ul>
                     </div> </li>
                     <li><a id="logoutBtn" class="logout hidden">Logout</a></li>

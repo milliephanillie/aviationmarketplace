@@ -35,15 +35,10 @@ export function update() {
 }
 
 export function updateLogin() {
-    console.log("update login")
     if( ! getEl(loginForm) ) {
-        console.log("update inner login")
         let loginHtml = (isAuth()) ? LoggedInLink : LoggedOutLink;
-
         getEl(userLogin).innerHTML = loginHtml;
         let logoutListener = getEl(userLogin).querySelector('#logoutBtn');
-        console.log("logoutListener");
-        console.log(logoutListener);
         initLogout(logoutListener);
     }
 }

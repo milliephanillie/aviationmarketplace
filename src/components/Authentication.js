@@ -14,7 +14,7 @@ import {
     fontPasswordInput,
     fontPasswordIcon,
     password,
-    loginError,
+    loginError, userLogin,
 } from "../config";
 
 import {init as Posts} from "./Posts";
@@ -24,7 +24,6 @@ import {updateLogin} from "./Header";
  * Initializes Login or lougout processes
  */
 export function init() {
-    console.log(state)
     if (Cookies.get(state.token) === undefined) {
         console.log("logged out");
         logout();
@@ -68,7 +67,9 @@ export function login() {
 
     document.body.classList.add('mp-logged-in');
 
-    updateLogin();
+    if(getEl(userLogin)) {
+        updateLogin();
+    }
 }
 
 /**
@@ -79,7 +80,9 @@ export function logout() {
 
     document.body.classList.remove('mp-logged-in');
 
-    updateLogin();
+    if(getEl(userLogin)) {
+        updateLogin();
+    }
 }
 
 /**
@@ -119,18 +122,12 @@ export function initLogin() {
     getEl(loginForm).addEventListener("submit", event => {
         event.preventDefault();
 
-        console.log("submitted login");
-
-
         const creds = {
             username: getEl(username).value,
             password: getEl(password).value,
         }
 
-        console.log(creds.username);
-        console.log(creds.password);
-
-        if (!creds.username || !creds.password) {
+        if ( ! creds. username || !creds.password ) {
             loginErrorMsg(loginError, "Please enter a username and password.");
 
             return;
@@ -142,11 +139,65 @@ export function initLogin() {
             clearHTML(loginError);
         }
 
-        const sendAuthRequest = async () => {
+        const sendUserPostsRequest = async () => {
+            try {
+                let namespace = "marketplace/v1/";
+                let route = "get_aircraft";
+                let url = state.restUrl + namespace  + route;
+
+                const responseUserPosts = await axios.get(url, {
+                    params: {
+                        aircraftType: null,
+                        post_status: null,
+                        per_page: 7,
+                    }
+                })
+                    .then( response => {
+                        if(state.user && state.loggedIn && state.token)  {
+                            getEl(loginFormButton).classList.remove('loading');
+                        }
+
+                        location();
+                    });
+            } catch (error) {
+
+            }
+        }
+
+        //This call gets made in the next request constant
+        const sendUserRequest = async () => {
             try {
                 let namespace = "marketplace/v1/";
                 let route = "get_user";
+                let url = state.restUrl + namespace  + route  +  '?user_login=' + creds.username;
 
+                const responseUser = await axios.get(url).then(response => {
+                    if ( 200 == response.status ) {
+
+                        Cookies.set("user_id", response.data.ID, {
+                            expires: 1,
+                            secure: true
+                        });
+
+
+                        setState("user", response.data)
+                        setState("loggedIn", true)
+
+                        init();
+                    }
+                });
+            } catch (error) {
+                //TODO: better error handling
+                console.error(error)
+                loginErrorMsg(loginError, "We could not fetch data for the username entered.");
+                getEl(loginFormButton).classList.remove('loading');
+            }
+
+            sendUserPostsRequest();
+        }
+
+        const sendAuthRequest = async () => {
+            try {
                 const authResponse = await axios({
                     method: "post",
                     url: state.restUrl + "jwt-auth/v1/token",
@@ -163,8 +214,6 @@ export function initLogin() {
                                 secure: true
                             });
 
-                            console.log("we made it to authentication")
-
                             setState("user", creds.username);
 
                             init();
@@ -173,7 +222,6 @@ export function initLogin() {
                         }
 
                         //location();
-                        getEl(loginFormButton).classList.remove('loading');
                     })
             } catch (error) {
                 //TODO: better error handling
@@ -181,54 +229,14 @@ export function initLogin() {
                 loginErrorMsg(loginError, "Oops, that wasn't a match.");
                 getEl(loginFormButton).classList.remove('loading');
             }
-        }
 
-        sendAuthRequest();
-
-        console.log("here we are before some states")
-
-        const sendUserRequest = async () => {
-            try {
-                let namespace = "marketplace/v1/";
-                let route = "get_user";
-                let url = state.restUrl + namespace  + route  +  '?user_login=' + creds.username;
-
-                console.log("here we are inside some states")
-                console.log(url)
-
-                const responseUser = await axios.get(url).then(response => {
-                    console.log("response inside user request")
-                    console.log(response)
-                    if ( 200 == response.status ) {
-                        setState("user", response.data)
-                        setState("loggedIn", true);
-                        init();
-                    }
-                    console.log("ok the state?")
-
-                    console.log(state);
-
-                    console.log("here we have some states")
-                    console.log("state.user")
-                    console.log(state.user)
-                    console.log("state.loggedIn")
-                    console.log(state.loggedIn)
-                    console.log(state.token)
-                    console.log("state.token")
-
-                    if(state.user && state.loggedIn && state.token)  {
-                        location();
-                    }
-                });
-            } catch (error) {
-                //TODO: better error handling
-                console.error(error)
-                loginErrorMsg(loginError, "We could not fetch data for the username entered.");
-                getEl(loginFormButton).classList.remove('loading');
+            if(state.user) {
+                sendUserRequest();
             }
         }
 
-        sendUserRequest();
+
+        sendAuthRequest();
     });
 }
 

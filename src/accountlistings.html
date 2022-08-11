@@ -10,15 +10,15 @@
         <div class="container nav-container">
             <div class="nav-row">
                 <div class="logo">
-                    <a class="logo-link" href="https://staging.flyingmag.com/marketplace/index.html">
+                    <a class="logo-link" href="/index.html">
                         <img src="../static/images/logo-dark.png" alt="FLYING Marketplace"/>
                     </a>
                 </div>
 
                 <nav class="main-nav">
                     <ul class="main-menu">
-                        <li><a href="https://staging.flyingmag.com/marketplace/page.html">BUY</a></li>
-                        <li><a href="https://staging.flyingmag.com/marketplace/sell.html">SELL</a></li>
+                        <li><a href="/page.html">BUY</a></li>
+                        <li><a href="/sell.html">SELL</a></li>
                     </ul>
                     <ul id="user-login" class="user-login">
                         <!-- dynamically populate  -->
@@ -54,15 +54,17 @@
     <div class="accountlistings-nav-wrapper">
         <div class="container">
             <div class=" small-container accountlistings-nav-inner">
-                <nav class="accountlistings-nav listing-filters-wrapper">
+                <nav id="accountlistings-nav" class="accountlistings-nav listing-filters-wrapper" data-user-id="510">
                     <ul>
-                        <li><a data-filter="publish" class="listing-filters listings-nav-item active">Active</a></li>
-                        <li><a data-filter="draft" class="listing-filters listings-nav-item">Drafts</a></li>
+                        <li><a id="draft" data-filter="publish" class="listing-filters listings-nav-item active">Active</a></li>
+                        <li><a id="publish" data-filter="draft" class="listing-filters listings-nav-item">Drafts</a></li>
+
+                        <!-- TODO: figure out the inactive state? -->
 <!--                        <li><a data-filter="draft" class="listings-nav-item">Inactive</a></li>-->
                     </ul>
                 </nav>
                 <div class="create-listing-wrapper">
-                    <a href="#" class="button button-red">Create Listing</a>
+                    <a href="/sell.html" class="button button-red">Create Listing</a>
                 </div>
             </div>
         </div>
@@ -72,39 +74,8 @@
     <section class="accountlistings-listings">
         <div class="container">
             <div class="small-container">
-                <div id="accountlistings">
-                    <div id="login-error">
-                    </div>
-                    <div class="item-wrapper">
-                        <div class="item listing-card">
-                            <div class="item-image" style="background: url('../static/images/aircraft-1.png'); background-size: cover;">
-                                <a class="item-image-link" href="">
-
-                                </a>
-                            </div>
-                            <div class="item-content">
-                                <div class="product-tag mb-5px">
-                                    <span>JET – 2014</span>
-                                </div>
-                                <div class="item-body">
-                                    <h4 class="m-0"><a href="#">Bombardier Challenger 300</a></h4>
-                                    <div class="item-company">
-                                        <p class="caption">Avpro Inc.</p>
-                                    </div>
-                                </div>
-                                <div class="price">
-                                    <span class="tagged">$12,495,000</span>
-                                </div>
-                                <div class="item-status">
-                                    <span class="button">ACTIVE</span>
-                                    <span class="button">PREMIUM + PRINT</span>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="item-edit">
-                            <a class="button">Edit</a>
-                        </div>
+                <div id="accountlistings-mount">
+                    <div id="listings-error">
                     </div>
                 </div>
             </div>
