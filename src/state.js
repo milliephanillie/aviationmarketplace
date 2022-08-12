@@ -17,7 +17,7 @@ const state = {
     currentPath: window.location.pathname,
     aircraftSingle: null,
     aircraft: null,
-    restUrl: "https://dev.flying/wp-json/",
+    restUrl: "https://staging.flyingmag.com/wp-json/",
     siteName: "Aviation Marketplace by FLYING",
     siteDescription: "Aviation marketplace",
 
