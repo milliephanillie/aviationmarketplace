@@ -18,3 +18,7 @@
   color: white;
   border: none;
 }
+
+.button.button-small {
+  padding: 5px 10px;
+}

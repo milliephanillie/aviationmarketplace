@@ -89,8 +89,6 @@ export function getAccountListings(user_id: number, post_status: string) {
         } catch (error) {
             //TODO: better error handling
             console.error(error)
-            loginErrorMsg(loginError, "Error what.");
-            getEl(loginFormButton).classList.remove('loading');
         }
     }
 
@@ -103,6 +101,8 @@ export function render()   {
     if( ! state.user.posts) {
         return;
     }
+
+    console.log(state.user.posts)
 
     state.user.posts.map((post: Post) => {
         const listing = createEl("div")

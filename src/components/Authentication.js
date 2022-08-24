@@ -110,10 +110,10 @@ export function initLogin() {
             if (passwordInput.getAttribute("type") === "password") {
                 passwordInput.setAttribute("type", "text");
 
-                showPasswordButton.classList.add('fa-eye', 'fa-solid');
+                showPasswordButton.classList.add('fa-eye-low-vision', 'fa-solid');
             } else {
                 passwordInput.setAttribute("type", "password");
-                showPasswordButton.classList.add('fa-eye-low-vision', 'fa-solid');
+                showPasswordButton.classList.add('fa-eye', 'fa-solid');
             }
 
         });

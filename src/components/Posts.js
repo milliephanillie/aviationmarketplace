@@ -84,11 +84,11 @@ export function render()   {
 
     state.aircraft.map(aircraft => {
         const listing = createEl("div")
-        listing.classList.add("item")
+        listing.classList.add("item", "from-posts")
         listing.innerHTML = `
             <div class="item-inner">
                 <div class="item-image" style="background: url('${aircraft.thumbnail_url}'); background-size:cover;">
-                    <a class="item-image-link" href="https://staging.flyingmag.com/marketplace/single.html"></a>
+                    <a class="item-image-link" href="/single.html"></a>
                 </div>
                 <div class="item-content">
                     <div class="product-tag mb-5px">
@@ -96,7 +96,7 @@ export function render()   {
                         ${aircraft.listing_promotion ? `<span class="featured">FEATURED</span>` : ''} 
                     </div>
                     <div class="item-body">
-                        <h4 class="m-0"><a href="https://staging.flyingmag.com/marketplace/single.html">${aircraft.title}</a></h4>
+                        <h4 class="m-0"><a href="/single.html">${aircraft.title}</a></h4>
                         <div class="item-company">
                             <p class="caption">${aircraft.seller}</p>
                         </div>
@@ -120,25 +120,24 @@ export function render()   {
 }
 
 export function initFilters() {
-    console.log("categoryFilters")
     if(getEl(listingsFilters)) {
-        console.log("categoryFilters 2")
         let categoryFilters = document.querySelectorAll(".category-filter");
-
-        console.log("categoryFilters")
-        console.log(categoryFilters)
 
         categoryFilters.forEach(filter => {
             filter.addEventListener("click", event => {
                 event.preventDefault();
+
                 categoryFilters.forEach(element => {
                     element.classList.remove('current');
-                })
+                });
+
                 filter.classList.add('current');
-                console.log(filter.getAttribute('data-cat'));
+
                 clear();
+
                 let errorDiv = createEl('div');
                 errorDiv.id = listingsError;
+
                 getEl(listingsMount).append(errorDiv);
                 getPosts(filter.getAttribute('data-cat'));
             })

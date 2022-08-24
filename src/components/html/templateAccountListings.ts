@@ -23,14 +23,14 @@ export function templateAccountListings(post: Post) : string  {
                 <span class="tagged">${post.price_tag}</span>
             </div>
             <div class="item-status">
-                <span class="button">ACTIVE</span>
-                <span class="button">PREMIUM + PRINT</span>
+                <span class="button button-small">ACTIVE</span>
+                <span class="button button-small">PREMIUM + PRINT</span>
             </div>
         </div>
 
     </div>
     <div class="item-edit">
         <a class="button">Edit</a>
-    </div>;
+    </div>
 `;
 }

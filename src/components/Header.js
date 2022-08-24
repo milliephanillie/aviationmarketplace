@@ -36,7 +36,7 @@ export function update() {
 
 export function updateLogin() {
     if( ! getEl(loginForm) ) {
-        let loginHtml = (isAuth()) ? LoggedInLink : LoggedOutLink;
+        let loginHtml = (isAuth()) ? LoggedInLink(state) : LoggedOutLink(state);
         getEl(userLogin).innerHTML = loginHtml;
         let logoutListener = getEl(userLogin).querySelector('#logoutBtn');
         initLogout(logoutListener);

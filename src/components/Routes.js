@@ -4,7 +4,7 @@ export const Routes = {
     single: "/single.html",
     login: "/login.html",
     logout: "/logout.html",
-    accountListings: "/accountlistings.html"
+    accountListings: "/accountlistings.html",
 }
 
 export const ProtectedRoutes  = {
@@ -14,4 +14,9 @@ export const ProtectedRoutes  = {
     sellaircraft: "/sellaircraft.html",
     sellrealestate: "/sellrealestate.html",
     settings: "/settings.html",
+}
+
+export const LoginRoutes = {
+    login: "/login.html",
+    logout: "/logout.html",
 }

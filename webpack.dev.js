@@ -34,8 +34,20 @@ module.exports = {
     plugins: [
         new CopyPlugin({
             patterns: [
-                { context: './src/', from: "**/*.html", to: "./", force: true },
-                { from: "static", to: "static" }
+                {
+                    context: './src/',
+                    from: "**/*.html", to: "./",
+                    force: true,
+                    transform(content, absoluteFrom) {
+                        return content
+                            .toString()
+                            .replace(/_SITE_URL_/g, "http://localhost:8080/");
+                    },
+                },
+                {
+                    from: "static",
+                    to: "static",
+                },
             ],
         }),
     ],

@@ -18,7 +18,9 @@ import { init as Posts } from "./components/Posts";
 import { init as Authentication } from "./components/Authentication";
 import { init as AccountListings } from "./components/AccountListings";
 
-console.log("state th index");
+const obj = {
+    obj: 'one'
+};
 
 (function init() {
     Authentication();
@@ -32,6 +34,8 @@ console.log("state th index");
     if(getEl(accountListingsMount)) {
         AccountListings(null);
     }
+
+
 })();
 
 import Splide from '@splidejs/splide';
@@ -63,7 +67,7 @@ var uuid = 'bdc07dec-7c84-5059-93e5-4dcf96d11d83';
 var app_name = "Marketplace";
 var success_url = "";
 var reject_url = "";
-var rest = 'https://dev.fklyingindex.php?rest_route=/'
+var rest = 'https://dev.flyingindex.php?rest_route=/'
 
 $('.testing').on('click', function (e) {
     e.preventDefault();
@@ -169,5 +173,7 @@ $('.js-update-aircraft, .js-save-aircraft-draft').on('click', function (e) {
         console.log(msg)
     })
 })
+
+
 
 

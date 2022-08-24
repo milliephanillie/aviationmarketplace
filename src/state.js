@@ -1,5 +1,5 @@
 import Cookies from "js-cookie";
-import {Routes, ProtectedRoutes} from "./components/Routes";
+import {Routes, ProtectedRoutes, LoginRoutes} from "./components/Routes";
 
 const from = Cookies.get("location-from");
 
@@ -11,16 +11,16 @@ const state = {
     },
     token: "wp-token",
     location:  {
-        from: (from != "undefined" && from !== "/logout.html" && from !== "/login.html") ? Cookies.get("location-from") : Routes.home,
+        from: (from != "undefined" && (Object.values(LoginRoutes).indexOf(from)) < 0) ? Cookies.get("location-from") : Routes.home,
         home: Routes.home,
     },
     currentPath: window.location.pathname,
     aircraftSingle: null,
     aircraft: null,
-    restUrl: "https://staging.flyingmag.com/wp-json/",
+    restUrl: "https://dev.flying/wp-json/",
     siteName: "Aviation Marketplace by FLYING",
     siteDescription: "Aviation marketplace",
-
+    siteUrl: "http://localhost:8080/",
 }
 
 const setState = (toSet, newValue) => {

@@ -23,15 +23,15 @@
     <div class="container nav-container">
         <div class="nav-row">
             <div class="logo">
-                <a class="logo-link" href="https://staging.flyingmag.com/marketplace/index.html">
+                <a class="logo-link" href="_SITE_URL_index.html">
                     <img src="../static/images/flying-markets.svg"
                          alt="FLYING Marketplace"/>
                 </a>
             </div>
             <nav class="main-nav">
                 <ul class="main-menu">
-                    <li><a href="https://staging.flyingmag.com/marketplace/page.html">BUY</a></li>
-                    <li><a href="https://staging.flyingmag.com/marketplace/sell.html">SELL</a></li>
+                    <li><a href="_SITE_URL_page.html">BUY</a></li>
+                    <li><a href="_SITE_URL_sell.html">SELL</a></li>
                 </ul>
                 <ul id="user-login" class="user-login">
                     <!-- dynamically populate -->
@@ -57,8 +57,8 @@
 <section class="gallery let-header-overlap">
     <div class="gallery-inner">
         <div class="container mx-auto">
-            <div class="do-3">
-                <div class="gallery-image lg:col-span-2">
+            <div class="do-3" id="gallery-mount">
+                <div class="gallery-image gallery-grid-first">
                     <div class="gallery-image-wrap">
                         <img src="../static/images/single-1.jpg"/>
                         <div class="view-all-wrapper">
@@ -68,11 +68,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="gallery-image gallery-image-sidebar lg:flex-wrap">
+                <div class="gallery-image gallery-image-sidebar gallery-grid-last">
                     <div class="gallery-image-wrap mb-[13px] mr-[10px] lg:mr-0 lg:mr-0 sm:w-1/2 lg:w-full">
                         <img src="../static/images/single-2.png"/>
                     </div>
-                    <div class="gallery-image-wrap sm:w-1/2 lg:w-full">
+                    <div class="gallery-image-wrap ">
                         <img src="../static/images/single-3.png"/>
                     </div>
                 </div>

@@ -27,6 +27,22 @@
   .tagged {
     @apply text-xs font-medium font-headers;
   }
+
+  .gallery-grid-first {
+    @apply lg:col-span-2;
+  }
+
+  .gallery-grid-last {
+    @apply lg:flex-wrap;
+  }
+
+  .gallery-grid-last-top {
+    @apply mb-[13px] mr-[10px] lg:mr-0 lg:mr-0 sm:w-1/2 lg:w-full;
+  }
+
+  .gallery-grid-last-bottom {
+    @apply sm:w-1/2 lg:w-full;
+  }
 }
 
 @import "const.css";
