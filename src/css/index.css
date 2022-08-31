@@ -74,6 +74,7 @@
 @import "accountlistings-nav.css";
 @import "loader.css";
 @import "@splidejs/splide/dist/css/splide.min.css";
+@import "wordpress.css";
 
 
 .html,

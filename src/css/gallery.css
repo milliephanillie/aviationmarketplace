@@ -19,6 +19,18 @@
   justify-content: space-between;
 }
 
+.gallery-grid-first img {
+  max-height: 500px;
+}
+
+.gallery-grid-last-top img {
+  max-height: 243px;
+}
+
+.gallery-grid-last-bottom img {
+  max-height: 244px;
+}
+
 /*.gallery-image-sidebar > div:not(:last-child) {*/
   /*margin-right: 10px;*/
 /*}*/

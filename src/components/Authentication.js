@@ -230,7 +230,7 @@ export function initLogin() {
                 getEl(loginFormButton).classList.remove('loading');
             }
 
-            if(state.user) {
+            if(state.user && Cookies.get(state.token)) {
                 sendUserRequest();
             }
         }

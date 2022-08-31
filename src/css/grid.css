@@ -18,3 +18,7 @@
 .let-header-overlap {
   padding-top: 145px;
 }
+
+body.single .let-header-overlap {
+  padding-top: 90px;
+}
