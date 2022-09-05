@@ -34,3 +34,18 @@ export const userLogin = "user-login";
 //admin
 export const accountListingsNav = "accountlistings-nav";
 export const accountListingsMount = "accountlistings-mount";
+
+//sell
+export const mfAutocomplete = "mf-autocomplete";
+export const sellAircraft = "sell-aircraft";
+export const updateAircraft = "update-aircraft";
+export const sellErrorMsg = "sell-error-msg";
+
+
+export const sellPostID = "sell-post-id";
+export const sellPostTitle = "sell-post-title";
+export const sellAircraftType = "sell-aircraft-type";
+export const sellCondition = "sell-condition";
+export const sellPrice = "sell-price";
+export const sellDescription = "sell-description";
+export const sellGallery = "sell-gallery";

@@ -1,7 +1,7 @@
 export interface Post {
     seller: string
     title: string,
-    category: string,
+    term: string,
     year: number,
     price: number,
     permalink: string,

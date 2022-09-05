@@ -30,7 +30,7 @@ export function doListingFilters() {
 
 
 
-    //TODO: switch from cookie to something else for capturaing user id
+    //TODO: switch from cookie to something else for capturing user id
     if (! user_id ) {
         let user_id = getEl(accountListingsNav).getAttribute('data-user-id');
     }
@@ -101,8 +101,6 @@ export function render()   {
     if( ! state.user.posts) {
         return;
     }
-
-    console.log(state.user.posts)
 
     state.user.posts.map((post: Post) => {
         const listing = createEl("div")

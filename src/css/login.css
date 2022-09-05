@@ -51,14 +51,6 @@ font-family:  var(--defaultFonts) ;
   text-transform: uppercase;
 }
 
-.login-form-button.loading  {
-  background: var(--textGray);
-}
-
-.login-form-button.loading:after {
-  content: 'loading...';
-}
-
 .login.logged-in + .profile-menu {
   display: none;
   position: absolute;

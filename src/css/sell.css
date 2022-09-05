@@ -57,3 +57,12 @@ input::placeholder {
   font-size: 18px;
   line-height: 24px;
 }
+
+.form-field.sell-a-form.required {
+  border: 1px solid red;
+}
+
+.listing-message {
+  text-align: center;
+  margin: 0 auto;
+}

@@ -11,7 +11,7 @@ export function templateAccountListings(post: Post) : string  {
         </div>
         <div class="item-content">
             <div class="product-tag mb-5px">
-                <span>${post.category} ${post.year ? '- ' + post.year : '' }</span>
+                <span>${post.term} ${post.year ? '- ' + post.year : '' }</span>
             </div>
             <div class="item-body">
                 <h4 class="m-0"><a href="#">${post.title}</a></h4>

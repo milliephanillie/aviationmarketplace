@@ -92,18 +92,9 @@ export function initLogin() {
     const passwordInput = getEl(fontPasswordInput);
     const showPasswordButton = getEl(fontPasswordIcon);
 
-    console.log("showPasswordButton")
-    console.log(showPasswordButton)
-
     if(showPasswordButton && passwordInput) {
-        console.log("passwordInput");
-        console.log(passwordInput);
         showPasswordButton.addEventListener("click", event => {
             event.preventDefault();
-
-            console.log("showPasswordButton was just clickied");
-
-            console.log(showPasswordButton.classList);
 
             showPasswordButton.classList = '';
 

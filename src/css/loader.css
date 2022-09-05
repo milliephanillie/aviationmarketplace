@@ -8,3 +8,22 @@
 .loader-wrapper i {
     font-size: 44px;
 }
+
+/* loader for buttons */
+
+.update-aircraft,
+.save-aircraft-draft {
+    position: relative;
+}
+
+.update-aircraft.loading,
+.save-aircraft-draft.loading,
+.login-form-button.loading  {
+    background: var(--textGray);
+}
+
+.update-aircraft.loading,
+.save-aircraft-draft.loading,
+.login-form-button.loading:after {
+    content: 'loading...';
+}
